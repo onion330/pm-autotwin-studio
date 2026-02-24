@@ -1,0 +1,51 @@
+# PM AutoTwin Studio
+
+> PM AutoTwin Studio is an enterprise 3D asset management OS developed by POCKET MEMORY Inc., a South Korean deep-tech company specializing in 3D digital twin optimization.
+
+## Company
+- **Name**: POCKET MEMORY Inc. (주식회사 포켓메모리)
+- **Website**: https://studio.pmautotwin.com
+- **Industry**: 3D Digital Twin, Asset Management, Industrial AI
+- **Location**: Seoul, South Korea
+
+## Product: PM AutoTwin Studio
+PM AutoTwin Studio is a comprehensive 3D pipeline platform consisting of three modules:
+
+### PM Create (GEN)
+- Generates instant 3D models from a single image input
+- Supports rapid prototyping and digital twin creation
+
+### PM Optimize (OPT)
+- Proprietary GNN (Graph Neural Network) algorithm for 3D mesh optimization
+- Achieves 98% polygon reduction while maintaining 82% original shape preservation
+- Processing time under 15 seconds for complex industrial models
+- Used by Hyundai Motor HMGICS for robot arm digitization (82% reduction, 86% preservation)
+- Used by SK ecoplant for battery housing ultra-optimization (98% reduction, 15s processing)
+
+### PM Hub (HUB)
+- 3D asset lifecycle management and distribution platform
+- Connects with enterprise ERP/MES systems
+- Supports SaaS, On-Premise, and API deployment modes
+
+## Key Technologies
+- **GNN Algorithm**: Proprietary Graph Neural Network for 3D mesh optimization
+- **PM OmniMetric**: Multi-dimensional quality measurement engine for 3D data
+- **IEEE Standards**: Active contributor to IEEE P3079.5 (3D Quality Measurement) and P3079.6 (3D Optimization)
+- **Official Reference Software**: Designated as IEEE P3079.6 Official Reference Software
+
+## Achievements & Awards
+- IEEE P3079.5 & P3079.6 Vice-Chair company
+- 2025 Minister's Award from Korea Ministry of Science & ICT
+- Hyundai Motor HMGICS collaboration: 82% reduction rate, 86% shape preservation
+- SK ecoplant collaboration: 98% optimization, 15-second processing
+
+## Deployment Options
+- **SaaS**: Cloud-based, immediate access
+- **On-Premise**: Enterprise security-grade local deployment
+- **API**: Pre-processing pipeline integration and extension
+
+## Languages
+The platform and website support Korean (ko), English (en), and Japanese (ja).
+
+## Contact
+For demo requests and enterprise inquiries, visit https://studio.pmautotwin.com/#cta
