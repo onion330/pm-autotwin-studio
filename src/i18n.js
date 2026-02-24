@@ -80,7 +80,7 @@ const translations = {
     // TRUST
     'trust.eyebrow': 'GLOBAL STANDARD',
     'trust.title': '글로벌 3D의 잣대,<br />오토트윈이 품질의<br /><em>기준</em>을 만듭니다.',
-    'trust.desc': '어떤 3D가 진짜 \'잘 만들어진\' 데이터인지 헷갈리셨나요?<br />오토트윈은 국제표준화기구 IEEE의 부의장사로서 글로벌 3D 품질 측정 기준(PAR 제안)을 직접 설계하고 있습니다.<br />전 세계가 신뢰할 표준 엔진에 귀사의 데이터를 맡기세요.',
+    'trust.desc': '어떤 3D가 진짜 \'잘 만들어진\' 데이터인지 헷갈리셨나요?<br /><br />오토트윈은 국제표준화기구 IEEE의 부의장사로서<br />글로벌 3D 품질 측정 기준(PAR 제안)을 직접 설계하고 있습니다.<br /><br />전 세계가 신뢰할 표준 엔진에 귀사의 데이터를 맡기세요.',
     'trust.ieee.label': 'IEEE P3079.6',
     'trust.ieee.title': 'Official Reference SW',
     'trust.ieee.sub': '국제 표준 공식 참조 소프트웨어',
@@ -100,13 +100,43 @@ const translations = {
     'trust.result3.year': '2025 과학기술정보통신부',
     'trust.result3.title': '장관상 수상',
     'trust.result3.tag': "MINISTER'S AWARD FOR SCIENCE & ICT",
+    // VIDEO
+    'video.title': '직접 확인하세요, <em>15초의 마법</em>',
+    'video.desc': '복잡한 3D 모델이 클릭 한 번으로 최적화되는 과정을 영상으로 확인하세요.',
     // CTA
     'cta.title': "당신의 3D 데이터가 <em>'자본'</em>으로<br />바뀌는 시간, <em>단 1분.</em>",
     'cta.desc': 'PM 오토트윈 스튜디오의 데모 신청 가능합니다.',
     'cta.btn.primary': '기업 맞춤형 데모 신청하기',
     'cta.btn.ghost': '다시 탐색하기',
+    'cta.form.label': '🚀 무료 데모 신청',
+    'cta.form.badge': 'CONTACT US',
+    'cta.form.title': '비즈니스 혁신을 위한 첫걸음',
+    'cta.form.subtitle': '궁금하신 프로젝트나 견적 문의를 남겨주시면 맞춤형 상세 제안서를 보내드립니다.',
+    'cta.form.name.label': '이름 / 회사명 <span class="required">*</span>',
+    'cta.form.name.placeholder': '이름 / 회사명',
+    'cta.form.company.label': '회사 / 기관명',
+    'cta.form.company.placeholder': '회사 / 기관명',
+    'cta.form.email.label': '이메일 <span class="required">*</span>',
+    'cta.form.email.placeholder': '이메일 주소',
+    'cta.form.phone.label': '연락처 <span class="required">*</span>',
+    'cta.form.phone.placeholder': '연락처',
+    'cta.form.message.label': '문의 내용 <span class="required">*</span>',
+    'cta.form.message.placeholder': '궁금하신 내용을 자유롭게 작성해주세요',
+    'cta.form.consent': '<a href="/privacy.html" target="_blank">개인정보 수집 및 이용</a>에 동의합니다. (이름, 이메일, 연락처, 회사명, 문의내용을 상담 목적으로 수집합니다)',
+    'cta.form.submit': '상담 신청하기',
+    'cta.form.success': '✅ 신청이 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.',
+    'cta.form.error': '❌ 전송에 실패했습니다. 잠시 후 다시 시도해주세요.',
     // FOOTER
-    'footer.copyright': '© 2025 PocketMemory Inc. All rights reserved.',
+    'footer.tagline': 'Automated 3D Optimization for the Future.',
+    'footer.product': 'Product',
+    'footer.product.features': '주요 기능',
+    'footer.product.cases': '적용 사례',
+    'footer.product.pricing': '요금제',
+    'footer.product.enterprise': '엔터프라이즈',
+    'footer.legal': '법적 고지',
+    'footer.legal.privacy': '개인정보 처리방침',
+    'footer.legal.terms': '서비스 이용약관',
+    'footer.copyright': '© 2025 <a href="https://www.pocketmemory.co.kr/" target="_blank" class="footer__pm-link">POCKET MEMORY</a> Inc. All rights reserved.',
   },
 
   en: {
@@ -186,7 +216,7 @@ const translations = {
     // TRUST
     'trust.eyebrow': 'GLOBAL STANDARD',
     'trust.title': 'The global 3D benchmark.<br />AutoTwin sets the<br /><em>standard</em> for quality.',
-    'trust.desc': 'Confused about what makes \'good\' 3D data?<br />AutoTwin, as IEEE Vice Chair, is directly designing the global 3D quality measurement standard (PAR proposal).<br />Trust your data to the standard engine the world relies on.',
+    'trust.desc': 'Confused about what makes \'good\' 3D data?<br /><br />AutoTwin, as IEEE Vice Chair, is directly designing<br />the global 3D quality measurement standard (PAR proposal).<br /><br />Trust your data to the standard engine the world relies on.',
     'trust.ieee.label': 'IEEE P3079.6',
     'trust.ieee.title': 'Official Reference SW',
     'trust.ieee.sub': 'International Standard Reference Software',
@@ -206,13 +236,43 @@ const translations = {
     'trust.result3.year': '2025 Ministry of Science & ICT',
     'trust.result3.title': "Minister's Award",
     'trust.result3.tag': "MINISTER'S AWARD FOR SCIENCE & ICT",
+    // VIDEO
+    'video.title': 'See it in action, <em>15-second magic</em>',
+    'video.desc': 'Watch how complex 3D models are optimized with a single click.',
     // CTA
     'cta.title': "Your 3D data becomes <em>'capital'</em><br />in just <em>1 minute.</em>",
     'cta.desc': 'PM AutoTwin Studio demo is available for request.',
     'cta.btn.primary': 'Request Custom Enterprise Demo',
     'cta.btn.ghost': 'Explore Again',
+    'cta.form.label': '🚀 Free Demo Request',
+    'cta.form.badge': 'CONTACT US',
+    'cta.form.title': 'The First Step to Innovation',
+    'cta.form.subtitle': 'Share your project details and we\'ll send you a customized proposal.',
+    'cta.form.name.label': 'Name <span class="required">*</span>',
+    'cta.form.name.placeholder': 'Full Name',
+    'cta.form.company.label': 'Company / Organization',
+    'cta.form.company.placeholder': 'Company Name',
+    'cta.form.email.label': 'Email <span class="required">*</span>',
+    'cta.form.email.placeholder': 'Email Address',
+    'cta.form.phone.label': 'Phone <span class="required">*</span>',
+    'cta.form.phone.placeholder': 'Phone Number',
+    'cta.form.message.label': 'Message <span class="required">*</span>',
+    'cta.form.message.placeholder': 'Tell us about your project or inquiry',
+    'cta.form.consent': 'I agree to the <a href="/privacy.html" target="_blank">collection and use of personal information</a>. (Name, email, phone, company, and message are collected for consultation purposes)',
+    'cta.form.submit': 'Submit Inquiry',
+    'cta.form.success': '✅ Your request has been submitted! We\'ll contact you shortly.',
+    'cta.form.error': '❌ Submission failed. Please try again later.',
     // FOOTER
-    'footer.copyright': '© 2025 PocketMemory Inc. All rights reserved.',
+    'footer.tagline': 'Automated 3D Optimization for the Future.',
+    'footer.product': 'Product',
+    'footer.product.features': 'Key Features',
+    'footer.product.cases': 'Use Cases',
+    'footer.product.pricing': 'Pricing',
+    'footer.product.enterprise': 'Enterprise',
+    'footer.legal': 'Legal',
+    'footer.legal.privacy': 'Privacy Policy',
+    'footer.legal.terms': 'Terms of Service',
+    'footer.copyright': '© 2025 <a href="https://www.pocketmemory.co.kr/" target="_blank" class="footer__pm-link">POCKET MEMORY</a> Inc. All rights reserved.',
   },
 
   ja: {
@@ -292,7 +352,7 @@ const translations = {
     // TRUST
     'trust.eyebrow': 'GLOBAL STANDARD',
     'trust.title': 'グローバル3Dの基準、<br />AutoTwinが品質の<br /><em>スタンダード</em>を作ります。',
-    'trust.desc': 'どの3Dが本当に「良い」データか迷っていませんか？<br />AutoTwinはIEEE副議長社として、グローバル3D品質測定基準（PAR提案）を直接設計しています。<br />世界が信頼する標準エンジンに御社のデータをお任せください。',
+    'trust.desc': 'どの3Dが本当に「良い」データか迷っていませんか？<br /><br />AutoTwinはIEEE副議長社として、<br />グローバル3D品質測定基準（PAR提案）を直接設計しています。<br /><br />世界が信頼する標準エンジンに御社のデータをお任せください。',
     'trust.ieee.label': 'IEEE P3079.6',
     'trust.ieee.title': 'Official Reference SW',
     'trust.ieee.sub': '国際標準公式参照ソフトウェア',
@@ -312,13 +372,43 @@ const translations = {
     'trust.result3.year': '2025年 科学技術情報通信部',
     'trust.result3.title': '大臣賞受賞',
     'trust.result3.tag': "MINISTER'S AWARD FOR SCIENCE & ICT",
+    // VIDEO
+    'video.title': '実際に確認してください、<em>15秒の魔法</em>',
+    'video.desc': '複雑な3Dモデルがワンクリックで最適化される過程を動画でご覧ください。',
     // CTA
     'cta.title': "あなたの3Dデータが<em>「資本」</em>に<br />変わる時間、<em>たった1分。</em>",
     'cta.desc': 'PM AutoTwin Studioのデモ申請が可能です。',
     'cta.btn.primary': 'カスタムエンタープライズデモを申請',
     'cta.btn.ghost': 'もう一度探索する',
+    'cta.form.label': '🚀 無料デモ申請',
+    'cta.form.badge': 'CONTACT US',
+    'cta.form.title': 'ビジネス革新への第一歩',
+    'cta.form.subtitle': 'プロジェクトやお見積りのお問い合わせをいただければ、カスタム提案書をお送りします。',
+    'cta.form.name.label': 'お名前 <span class="required">*</span>',
+    'cta.form.name.placeholder': 'お名前',
+    'cta.form.company.label': '会社 / 組織名',
+    'cta.form.company.placeholder': '会社名',
+    'cta.form.email.label': 'メール <span class="required">*</span>',
+    'cta.form.email.placeholder': 'メールアドレス',
+    'cta.form.phone.label': 'お電話 <span class="required">*</span>',
+    'cta.form.phone.placeholder': '電話番号',
+    'cta.form.message.label': 'お問い合わせ内容 <span class="required">*</span>',
+    'cta.form.message.placeholder': 'ご質問やプロジェクトについて自由にご記入ください',
+    'cta.form.consent': '<a href="/privacy.html" target="_blank">個人情報の収集・利用</a>に同意します。（氏名、メール、電話番号、会社名、お問い合わせ内容を相談目的で収集します）',
+    'cta.form.submit': '相談を申請する',
+    'cta.form.success': '✅ 申請が完了しました！早急にご連絡いたします。',
+    'cta.form.error': '❌ 送信に失敗しました。しばらくしてから再度お試しください。',
     // FOOTER
-    'footer.copyright': '© 2025 PocketMemory Inc. All rights reserved.',
+    'footer.tagline': 'Automated 3D Optimization for the Future.',
+    'footer.product': 'Product',
+    'footer.product.features': '主要機能',
+    'footer.product.cases': '適用事例',
+    'footer.product.pricing': '料金プラン',
+    'footer.product.enterprise': 'エンタープライズ',
+    'footer.legal': '法的事項',
+    'footer.legal.privacy': 'プライバシーポリシー',
+    'footer.legal.terms': '利用規約',
+    'footer.copyright': '© 2025 <a href="https://www.pocketmemory.co.kr/" target="_blank" class="footer__pm-link">POCKET MEMORY</a> Inc. All rights reserved.',
   }
 };
 
@@ -339,6 +429,13 @@ export function setLang(lang) {
     } else {
       el.textContent = val;
     }
+  });
+
+  // Handle placeholder translations
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const val = translations[lang][key];
+    if (val !== undefined) el.placeholder = val;
   });
 
   // Update active button

@@ -567,7 +567,19 @@ function initNav() {
   const links = document.getElementById('navLinks');
   window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 60), { passive: true });
   toggle?.addEventListener('click', () => links.classList.toggle('active'));
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
+
+  // Logo click → scroll to top (page reset)
+  const logo = document.querySelector('.nav__logo');
+  if (logo) {
+    logo.addEventListener('click', e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      links.classList.remove('active');
+    });
+  }
+
+  // Section anchor clicks (exclude logo)
+  document.querySelectorAll('a[href^="#"]:not(.nav__logo)').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
       const t = document.querySelector(a.getAttribute('href'));
@@ -841,6 +853,129 @@ function initStudioPrompt() {
   }
 }
 
+/* ═══ VIDEO SHOWCASE ═══ */
+function initVideoShowcase() {
+  const thumb = document.getElementById('videoThumb');
+  const embed = document.getElementById('videoEmbed');
+  const expand = document.getElementById('videoExpand');
+  const cinema = document.getElementById('videoCinema');
+  const cinemaPlayer = document.getElementById('videoCinemaPlayer');
+  const cinemaClose = document.getElementById('videoCinemaClose');
+  const thumbImg = document.getElementById('videoThumbImg');
+  if (!thumb || !embed) return;
+
+  function getVideoId() {
+    return getLang() === 'ko' ? 'pC7eHKDvC78' : 'WKhcYuFlre4';
+  }
+
+  function getEmbedUrl(autoplay = true) {
+    return `https://www.youtube.com/embed/${getVideoId()}?rel=0&modestbranding=1${autoplay ? '&autoplay=1' : ''}`;
+  }
+
+  // Update thumbnail when language changes
+  const origSetLang = window.__videoLangWatcher;
+  function updateThumbForLang() {
+    if (thumbImg && thumb.style.display !== 'none') {
+      thumbImg.src = `https://img.youtube.com/vi/${getVideoId()}/maxresdefault.jpg`;
+    }
+  }
+  // Watch for language changes via MutationObserver on html lang
+  const langObs = new MutationObserver(() => updateThumbForLang());
+  langObs.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  // Play inline
+  thumb.addEventListener('click', () => {
+    embed.innerHTML = `<iframe src="${getEmbedUrl()}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    embed.style.display = 'block';
+    thumb.style.display = 'none';
+  });
+
+  // Expand to cinema mode
+  expand?.addEventListener('click', () => {
+    if (cinemaPlayer) {
+      cinemaPlayer.innerHTML = `<iframe src="${getEmbedUrl()}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    }
+    cinema?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  function closeCinema() {
+    cinema?.classList.remove('active');
+    document.body.style.overflow = '';
+    if (cinemaPlayer) cinemaPlayer.innerHTML = '';
+  }
+
+  cinemaClose?.addEventListener('click', closeCinema);
+  cinema?.addEventListener('click', (e) => { if (e.target === cinema) closeCinema(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && cinema?.classList.contains('active')) closeCinema(); });
+}
+
+/* ═══ CTA FORM SUBMISSION ═══ */
+function initCtaForm() {
+  const form = document.getElementById('cta-form');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const status = document.getElementById('cta-form-status');
+    const btn = form.querySelector('.cta__form-submit');
+
+    // Validate consent
+    const consent = form.querySelector('#consent-check');
+    if (!consent?.checked) {
+      if (status) {
+        status.className = 'cta__form-status error';
+        const lang = getLang();
+        const msgs = { ko: '개인정보 수집 및 이용에 동의해주세요.', en: 'Please agree to the collection and use of personal information.', ja: '個人情報の収集・利用に同意してください。' };
+        status.textContent = msgs[lang] || msgs.ko;
+      }
+      return;
+    }
+
+    // Collect form data
+    const formData = new FormData(form);
+    const payload = {
+      preset: 'pm_at_st_demo',
+      source: '오토트윈스튜디오베타',
+      group: '오토트윈스튜디오베타',
+    };
+    for (const [key, value] of formData.entries()) {
+      if (value) payload[key] = value;
+    }
+
+    btn.disabled = true;
+    if (status) { status.className = 'cta__form-status'; status.textContent = ''; }
+
+    try {
+      const res = await fetch('https://onion-pm.vercel.app/api/crm/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        if (status) {
+          status.className = 'cta__form-status success';
+          const lang = getLang();
+          const translations = await import('./i18n.js');
+          status.textContent = { ko: '✅ 신청이 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.', en: "✅ Your request has been submitted! We'll contact you shortly.", ja: '✅ 申請が完了しました！早急にご連絡いたします。' }[lang] || '✅ 신청이 완료되었습니다!';
+        }
+        form.reset();
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (err) {
+      if (status) {
+        status.className = 'cta__form-status error';
+        const lang = getLang();
+        status.textContent = { ko: '❌ 전송에 실패했습니다. 잠시 후 다시 시도해주세요.', en: '❌ Submission failed. Please try again later.', ja: '❌ 送信に失敗しました。しばらくしてから再度お試しください。' }[lang] || '❌ 전송 실패';
+      }
+    } finally {
+      btn.disabled = false;
+    }
+  });
+}
+
 /* ═══ BOOT ═══ */
 document.addEventListener('DOMContentLoaded', async () => {
   // Scroll to top to ensure chaos phase starts correctly
@@ -850,6 +985,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   initNav(); initReveals(); initHeroContentFade(); initHeroMetrics();
   initRingCharts(); initBarCharts(); initKPIRings(); initDeployBars();
   initCounters(); initTypingAnimation(); initProgressDemo(); initTimelineAnimation();
-  initStudioPrompt();
+  initStudioPrompt(); initCtaForm(); initVideoShowcase();
   initI18n();
 });
