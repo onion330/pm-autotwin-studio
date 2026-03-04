@@ -910,6 +910,31 @@ function initVideoShowcase() {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && cinema?.classList.contains('active')) closeCinema(); });
 }
 
+/* ═══ AUTOTWIN POPUP ═══ */
+function initAutotwinPopup() {
+  const popup = document.getElementById('autotwinPopup');
+  const openBtn = document.getElementById('autotwinBannerCta');
+  const closeBtn = document.getElementById('autotwinPopupClose');
+  const overlay = document.getElementById('autotwinPopupOverlay');
+  if (!popup || !openBtn) return;
+
+  function openPopup() {
+    popup.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePopup() {
+    popup.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openPopup);
+  closeBtn?.addEventListener('click', closePopup);
+  overlay?.addEventListener('click', closePopup);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && popup.classList.contains('active')) closePopup();
+  });
+}
+
 /* ═══ CTA FORM SUBMISSION ═══ */
 function initCtaForm() {
   const form = document.getElementById('cta-form');
@@ -985,6 +1010,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   initNav(); initReveals(); initHeroContentFade(); initHeroMetrics();
   initRingCharts(); initBarCharts(); initKPIRings(); initDeployBars();
   initCounters(); initTypingAnimation(); initProgressDemo(); initTimelineAnimation();
-  initStudioPrompt(); initCtaForm(); initVideoShowcase();
+  initStudioPrompt(); initCtaForm(); initVideoShowcase(); initAutotwinPopup();
   initI18n();
 });
