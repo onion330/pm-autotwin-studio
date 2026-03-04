@@ -910,6 +910,33 @@ function initVideoShowcase() {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && cinema?.classList.contains('active')) closeCinema(); });
 }
 
+/* ═══ BEFORE/AFTER SLIDER ═══ */
+function initBASlider() {
+  const slider = document.getElementById('baSlider');
+  const beforeEl = document.getElementById('baSliderBefore');
+  const handle = document.getElementById('baSliderHandle');
+  if (!slider || !beforeEl || !handle) return;
+
+  let isDragging = false;
+
+  function updatePosition(clientX) {
+    const rect = slider.getBoundingClientRect();
+    let pct = ((clientX - rect.left) / rect.width) * 100;
+    pct = Math.max(2, Math.min(98, pct));
+    beforeEl.style.width = pct + '%';
+    handle.style.left = pct + '%';
+    if (!slider.classList.contains('dragged')) slider.classList.add('dragged');
+  }
+
+  slider.addEventListener('mousedown', (e) => { isDragging = true; updatePosition(e.clientX); });
+  window.addEventListener('mousemove', (e) => { if (isDragging) { e.preventDefault(); updatePosition(e.clientX); } });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+
+  slider.addEventListener('touchstart', (e) => { isDragging = true; updatePosition(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchmove', (e) => { if (isDragging) updatePosition(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchend', () => { isDragging = false; });
+}
+
 /* ═══ AUTOTWIN POPUP ═══ */
 function initAutotwinPopup() {
   const popup = document.getElementById('autotwinPopup');
@@ -1010,6 +1037,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   initNav(); initReveals(); initHeroContentFade(); initHeroMetrics();
   initRingCharts(); initBarCharts(); initKPIRings(); initDeployBars();
   initCounters(); initTypingAnimation(); initProgressDemo(); initTimelineAnimation();
-  initStudioPrompt(); initCtaForm(); initVideoShowcase(); initAutotwinPopup();
+  initStudioPrompt(); initCtaForm(); initVideoShowcase(); initAutotwinPopup(); initBASlider();
   initI18n();
 });
