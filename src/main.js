@@ -923,7 +923,7 @@ function initBASlider() {
     const rect = slider.getBoundingClientRect();
     let pct = ((clientX - rect.left) / rect.width) * 100;
     pct = Math.max(2, Math.min(98, pct));
-    beforeEl.style.width = pct + '%';
+    beforeEl.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
     handle.style.left = pct + '%';
     if (!slider.classList.contains('dragged')) slider.classList.add('dragged');
   }

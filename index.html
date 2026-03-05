@@ -302,6 +302,38 @@
         </p>
       </div>
 
+      <!-- DEMO VIDEO (Studio 내부) -->
+      <div class="studio__video" data-reveal>
+        <div class="video-showcase__player" id="videoPlayer">
+          <!-- Thumbnail overlay (before play) -->
+          <div class="video-showcase__thumb" id="videoThumb">
+            <img src="https://img.youtube.com/vi/pC7eHKDvC78/maxresdefault.jpg" alt="PM AutoTwin Demo"
+              class="video-showcase__thumb-img" id="videoThumbImg" />
+            <div class="video-showcase__play-ring">
+              <svg viewBox="0 0 80 80" class="video-showcase__play-svg">
+                <circle cx="40" cy="40" r="38" fill="none" stroke="rgba(0,243,255,0.3)" stroke-width="2" />
+                <circle cx="40" cy="40" r="38" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="240"
+                  stroke-dashoffset="240" class="video-showcase__play-circle" />
+              </svg>
+              <div class="video-showcase__play-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="video-showcase__thumb-overlay"></div>
+          </div>
+          <!-- iframe (after play) -->
+          <div class="video-showcase__embed" id="videoEmbed" style="display:none"></div>
+          <!-- Expand button -->
+          <button class="video-showcase__expand" id="videoExpand" title="Expand" aria-label="Expand video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
       <!-- 3-Step Pipeline Animation -->
       <div class="studio__pipeline" data-reveal>
         <div class="studio__pipe-step" data-step="1">
@@ -419,6 +451,58 @@
               1GB 이상의 Full-Assembly 산업 도면도 분할 없이 한 번에.<br />
               기존 툴 대비 <strong>4.1배 빠른 속도</strong>로 전처리 병목을 해소합니다.
             </p>
+            <ul class="studio__feature-list">
+              <li data-i18n="studio.feature.opt.format">PLY · USD · STP · STL · GLB · FBX 등 6종 포맷 임포트 및 크로스 변환 지원</li>
+              <li data-i18n="studio.feature.opt.metadata">계층 구조 · 태그 · 재질 등 메타데이터 무손실 보존 (Lossless Metadata
+                Preservation)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PLY Scan Data Gateway -->
+        <div class="studio__feature-card studio__feature-card--ply">
+          <div class="studio__feature-content">
+            <span class="studio__feature-tag studio__feature-tag--orange" data-i18n="studio.feature.ply.tag">SCAN DATA
+              GATEWAY</span>
+            <h3 class="studio__feature-title" data-i18n="studio.feature.ply.title" data-i18n-html>초대용량 3D 스캔
+              데이터(PLY),<br />가상 환경과 AI를 향한 필수 관문</h3>
+            <p class="studio__feature-desc" data-i18n="studio.feature.ply.desc" data-i18n-html>
+              렌더링을 멈추게 하는 수십 GB의 거대한 현실 환경(스캔) 데이터.<br />
+              PM 오토트윈은 단순 무작위 삭제를 넘어, 원본의 <strong>뼈대와 형상을 완벽히 보존</strong>하며 용량을 <strong>1/10로 압축</strong>하는 '지능형 최적화
+              게이트웨이'를 제공합니다.
+            </p>
+            <!-- Compression gauge -->
+            <div class="ply-gauge" data-reveal>
+              <div class="ply-gauge__header">
+                <span class="ply-gauge__label" data-i18n="studio.ply.gauge.label">지능형 압축률</span>
+                <span class="ply-gauge__value">10×</span>
+              </div>
+              <div class="ply-gauge__track">
+                <div class="ply-gauge__fill" data-width="90"></div>
+                <div class="ply-gauge__marker" style="left:10%">
+                  <span>Optimized</span>
+                </div>
+              </div>
+              <div class="ply-gauge__stats">
+                <div class="ply-gauge__stat">
+                  <span class="ply-gauge__stat-label">Original</span>
+                  <span class="ply-gauge__stat-value ply-gauge__stat-value--dim">~30 GB</span>
+                </div>
+                <div class="ply-gauge__stat">
+                  <span class="ply-gauge__stat-label">Optimized</span>
+                  <span class="ply-gauge__stat-value ply-gauge__stat-value--glow">~3 GB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="studio__feature-visual studio__feature-visual--ply">
+            <img src="/ply.png" alt="PLY 스캔 데이터 최적화" class="studio__feature-img" loading="lazy" />
+            <div class="ply-overlay">
+              <div class="ply-overlay__badge">
+                <span class="ply-overlay__icon">⚡</span>
+                <span data-i18n="studio.ply.badge">Omniverse · AI Ready</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -435,9 +519,9 @@
               썸네일과 태그 검색으로 마케터도, 영업사원도 필요한 에셋을 1초 만에 찾아 즉시 실무에 투입하세요.
             </p>
             <ul class="studio__feature-list">
-              <li>End-to-End 자산 운영 · PM Hub 중앙 관리</li>
-              <li>최적화 이력·실시간 피드백·보안 공유 링크로 B2B 협업 극대화</li>
-              <li>설치 없이 브라우저에서 3D 모델 즉시 확인·검토</li>
+              <li data-i18n="studio.feature.mgr.list1">End-to-End 자산 운영 · PM Hub 중앙 관리</li>
+              <li data-i18n="studio.feature.mgr.list2">최적화 이력·실시간 피드백·보안 공유 링크로 B2B 협업 극대화</li>
+              <li data-i18n="studio.feature.mgr.list3">설치 없이 브라우저에서 3D 모델 즉시 확인·검토</li>
             </ul>
           </div>
           <div class="studio__feature-visual">
@@ -671,60 +755,18 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       VIDEO SHOWCASE — YouTube Demo
-       ═══════════════════════════════════════════════════════════ -->
-  <section class="section video-showcase">
-    <div class="container">
-      <div class="video-showcase__inner" data-reveal>
-        <div class="video-showcase__header">
-          <span class="video-showcase__eyebrow">DEMO VIDEO</span>
-          <h2 class="video-showcase__title" data-i18n="video.title" data-i18n-html>직접 확인하세요, <em>15초의 마법</em></h2>
-          <p class="video-showcase__desc" data-i18n="video.desc">복잡한 3D 모델이 클릭 한 번으로 최적화되는 과정을 영상으로 확인하세요.</p>
-        </div>
-        <div class="video-showcase__player" id="videoPlayer">
-          <!-- Thumbnail overlay (before play) -->
-          <div class="video-showcase__thumb" id="videoThumb">
-            <img src="https://img.youtube.com/vi/pC7eHKDvC78/maxresdefault.jpg" alt="PM AutoTwin Demo"
-              class="video-showcase__thumb-img" id="videoThumbImg" />
-            <div class="video-showcase__play-ring">
-              <svg viewBox="0 0 80 80" class="video-showcase__play-svg">
-                <circle cx="40" cy="40" r="38" fill="none" stroke="rgba(0,243,255,0.3)" stroke-width="2" />
-                <circle cx="40" cy="40" r="38" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="240"
-                  stroke-dashoffset="240" class="video-showcase__play-circle" />
-              </svg>
-              <div class="video-showcase__play-btn">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-            <div class="video-showcase__thumb-overlay"></div>
-          </div>
-          <!-- iframe (after play) -->
-          <div class="video-showcase__embed" id="videoEmbed" style="display:none"></div>
-          <!-- Expand button -->
-          <button class="video-showcase__expand" id="videoExpand" title="Expand" aria-label="Expand video">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-            </svg>
-          </button>
-        </div>
-      </div>
+  <!-- Cinema mode overlay (비디오 시네마) -->
+  <div class="video-showcase__cinema" id="videoCinema">
+    <div class="video-showcase__cinema-content">
+      <div class="video-showcase__cinema-player" id="videoCinemaPlayer"></div>
+      <button class="video-showcase__cinema-close" id="videoCinemaClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
     </div>
-    <!-- Cinema mode overlay -->
-    <div class="video-showcase__cinema" id="videoCinema">
-      <div class="video-showcase__cinema-content">
-        <div class="video-showcase__cinema-player" id="videoCinemaPlayer"></div>
-        <button class="video-showcase__cinema-close" id="videoCinemaClose" aria-label="Close">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <!-- ═══════════════════════════════════════════════════════════
        ZERO-LEARNING — 타이핑 → 파괴 → 사심플 대시보드

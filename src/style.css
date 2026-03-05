@@ -531,6 +531,25 @@ ol {
     margin: 0 auto;
 }
 
+/* Studio embedded video */
+.studio__video {
+    max-width: 840px;
+    margin: 0 auto 48px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.4s ease;
+}
+
+.studio__video:hover {
+    box-shadow: 0 20px 60px rgba(0, 243, 255, 0.08);
+}
+
+.studio__video .video-showcase__player {
+    border-radius: 0;
+}
+
 /* Pipeline */
 .studio__pipeline {
     display: flex;
@@ -704,6 +723,172 @@ ol {
     border: 1px solid rgba(0, 255, 163, 0.15);
 }
 
+.studio__feature-tag--orange {
+    color: #ff9f43;
+    background: rgba(255, 159, 67, 0.08);
+    border: 1px solid rgba(255, 159, 67, 0.15);
+}
+
+/* PLY Feature Visual */
+.studio__feature-visual--ply {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ply-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.ply-overlay__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: rgba(255, 159, 67, 0.12);
+    border: 1px solid rgba(255, 159, 67, 0.3);
+    backdrop-filter: blur(12px);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: #ff9f43;
+    letter-spacing: 0.05em;
+    animation: ply-badge-glow 3s ease-in-out infinite;
+}
+
+.ply-overlay__icon {
+    font-size: 14px;
+}
+
+@keyframes ply-badge-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(255, 159, 67, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 24px rgba(255, 159, 67, 0.3);
+    }
+}
+
+/* PLY Compression Gauge */
+.ply-gauge {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255, 159, 67, 0.03);
+    border: 1px solid rgba(255, 159, 67, 0.08);
+}
+
+.ply-gauge__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.ply-gauge__label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ply-gauge__value {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff9f43;
+    text-shadow: 0 0 16px rgba(255, 159, 67, 0.4);
+}
+
+.ply-gauge__track {
+    position: relative;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    overflow: visible;
+    margin-bottom: 16px;
+}
+
+.ply-gauge__fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #ff9f43, #ff6b6b);
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 12px rgba(255, 159, 67, 0.3);
+}
+
+.ply-gauge.revealed .ply-gauge__fill {
+    width: 90%;
+}
+
+.ply-gauge__marker {
+    position: absolute;
+    top: -28px;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--cyan);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.ply-gauge__marker::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 34px;
+    background: linear-gradient(180deg, var(--cyan), transparent);
+    opacity: 0.4;
+}
+
+.ply-gauge__stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ply-gauge__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ply-gauge__stat-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ply-gauge__stat-value {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ply-gauge__stat-value--dim {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    text-decoration-color: rgba(255, 107, 107, 0.4);
+}
+
+.ply-gauge__stat-value--glow {
+    color: #ff9f43;
+    text-shadow: 0 0 12px rgba(255, 159, 67, 0.3);
+}
+
 /* Before/After Slider Visual */
 .studio__feature-visual--slider {
     padding: 0;
@@ -733,9 +918,9 @@ ol {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    overflow: hidden;
+    clip-path: inset(0 50% 0 0);
     z-index: 2;
 }
 
@@ -747,10 +932,6 @@ ol {
     pointer-events: none;
 }
 
-.ba-slider__before .ba-slider__img {
-    width: 200%;
-    max-width: none;
-}
 
 .ba-slider__label {
     position: absolute;
