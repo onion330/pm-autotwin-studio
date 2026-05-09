@@ -9,6 +9,7 @@ const translations = {
     'nav.precision': '정밀도',
     'nav.usability': '사용성',
     'nav.trust': '신뢰',
+    'nav.company': '포켓메모리',
     'nav.demo': '무료 사용하기',
     // HERO
     'hero.badge': 'GLOBAL 3D ASSET MANAGEMENT OS',
@@ -186,6 +187,7 @@ const translations = {
     'nav.precision': 'Precision',
     'nav.usability': 'Usability',
     'nav.trust': 'Trust',
+    'nav.company': 'Pocket Memory',
     'nav.demo': 'Try Free',
     // HERO
     'hero.badge': 'GLOBAL 3D ASSET MANAGEMENT OS',
@@ -363,6 +365,7 @@ const translations = {
     'nav.precision': '精度',
     'nav.usability': '使いやすさ',
     'nav.trust': '信頼',
+    'nav.company': 'ポケットメモリー',
     'nav.demo': '無料で使う',
     // HERO
     'hero.badge': 'GLOBAL 3D ASSET MANAGEMENT OS',
