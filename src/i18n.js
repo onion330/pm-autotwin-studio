@@ -594,10 +594,11 @@ export function initI18n() {
   setLang(lang);
 }
 
-// URL 경로에서 언어 감지: /en → 'en', /jp → 'ja'
+// URL 경로에서 언어 감지: /en → 'en', /jp → 'ja', /kr → 'ko'
 function detectLangFromPath() {
   const path = window.location.pathname.replace(/\/$/, '').toLowerCase();
   if (path === '/en') return 'en';
   if (path === '/jp') return 'ja';
+  if (path === '/kr') return 'ko';
   return null;
 }
