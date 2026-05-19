@@ -575,9 +575,14 @@ export function getLang() {
 }
 
 export function initI18n() {
+  // 1순위: URL 경로 (/en → 영어, /jp → 일본어)
+  const pathLang = detectLangFromPath();
+  // 2순위: localStorage 저장값
   const saved = localStorage.getItem('pm-autotwin-lang');
+  // 3순위: 브라우저 언어 (한국=ko, 일본=ja, 그 외 해외=en)
   const browserLang = navigator.language.slice(0, 2);
-  const lang = saved || (['ko', 'en', 'ja'].includes(browserLang) ? browserLang : 'ko');
+  const browserDetected = browserLang === 'ko' ? 'ko' : (browserLang === 'ja' ? 'ja' : 'en');
+  const lang = pathLang || saved || browserDetected;
 
   // Setup language switcher buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -587,4 +592,12 @@ export function initI18n() {
   });
 
   setLang(lang);
+}
+
+// URL 경로에서 언어 감지: /en → 'en', /jp → 'ja'
+function detectLangFromPath() {
+  const path = window.location.pathname.replace(/\/$/, '').toLowerCase();
+  if (path === '/en') return 'en';
+  if (path === '/jp') return 'ja';
+  return null;
 }
