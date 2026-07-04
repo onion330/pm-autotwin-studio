@@ -210,19 +210,23 @@
     <div class="hero__content" id="heroContent">
       <div class="hero__badge">
         <span class="hero__badge-dot"></span>
-        <span data-i18n="hero.badge">GLOBAL 3D ASSET MANAGEMENT OS</span>
+        <span data-i18n="hero.badge">⚡ PHYSICAL AI 국가전략 시대</span>
       </div>
       <h1 class="hero__title">
-        <span class="hero__title-line" data-i18n="hero.title.1">무거운 3D 파일,</span>
-        <span class="hero__title-line" data-i18n="hero.title.2">1분 만에 가벼운</span>
-        <span class="hero__title-line hero__title--accent" data-i18n="hero.title.3" data-i18n-html><em>'자산'</em>이
-          됩니다.</span>
+        <span class="hero__title-large" data-i18n="hero.title.1" data-i18n-html>Physical AI 시대,</span>
+        <span class="hero__title-line" data-i18n="hero.title.2" data-i18n-html>시뮬레이션이 중요합니다.</span>
+        <span class="hero__title-line" data-i18n="hero.title.3" data-i18n-html>그 시뮬레이션 시간의 73%가,</span>
+        <span class="hero__title-line" data-i18n="hero.title.4" data-i18n-html>3D 데이터 준비(전처리)에 소모됩니다.<sup>*</sup></span>
       </h1>
+      <p class="hero__subtitle hero__subtitle--main"
+        style="font-size:1.5rem;font-weight:700;margin-top:0.5rem;color:var(--cyan)" data-i18n="hero.subtitle.tagline">
+        원형을 지키면서, 가장 쉽게 가벼워지는 방법.</p>
+      <p class="hero__title-brand" style="font-size:2.2rem;font-weight:900;margin:0.5rem 0;">PM AutoTwin Studio</p>
       <p class="hero__subtitle" data-i18n="hero.subtitle" data-i18n-html>
-        더 이상 3D 전문 디자이너에게 매번 변환을 부탁할 필요 없습니다.<br />
-        마케터도, 기획자도 <strong>드래그 한 번</strong>이면 끝.<br />
-        웹과 모바일에 당장 올릴 수 있도록 오토트윈이 알아서 최적화합니다.
+        무거운 CAD 파일, 1분 만에 가벼운 ‘자산’이 됩니다.
       </p>
+      <p class="hero__footnote" style="font-size:0.8rem;opacity:0.6;margin-top:0.5rem;">*Sandia National Labs 연구 기준 / 경량
+        샘플 파일 기준 최대 처리 속도</p>
 
       <!-- Live transform metrics -->
       <div class="hero__metrics" id="heroMetrics">
@@ -366,7 +370,7 @@
             </svg>
           </div>
           <span class="studio__pipe-num">02</span>
-          <h4 class="studio__pipe-title" data-i18n="studio.pipe.2.title">GNN 최적화</h4>
+          <h4 class="studio__pipe-title" data-i18n="studio.pipe.2.title">Vertex-GNN 최적화</h4>
           <p class="studio__pipe-desc" data-i18n="studio.pipe.2.desc">원클릭 자동 경량화</p>
         </div>
         <div class="studio__pipe-arrow">
@@ -447,19 +451,25 @@
             </div>
           </div>
           <div class="studio__feature-content">
-            <span class="studio__feature-tag studio__feature-tag--green" data-i18n="studio.feature.opt.tag">GNN
-              OPTIMIZATION</span>
+            <span class="studio__feature-tag studio__feature-tag--green" data-i18n="studio.feature.opt.tag">VERTEX-GNN
+              OPTIMIZATION<sup>*</sup></span>
             <h3 class="studio__feature-title" data-i18n="studio.feature.opt.title" data-i18n-html>상용 엔진이 멈추는
               초대용량,<br />오토트윈은 막힘없이 돌파합니다.</h3>
             <p class="studio__feature-desc" data-i18n="studio.feature.opt.desc" data-i18n-html>
               1GB 이상의 Full-Assembly 산업 도면도 분할 없이 한 번에.<br />
-              기존 툴 대비 <strong>4.1배 빠른 속도</strong>로 전처리 병목을 해소합니다.
+              기존 툴 대비 <strong>평균 4배 빠른 처리 속도</strong>로 전처리 병목을 해소합니다.<small style="font-size:0.75em">*1.56GB 파일
+                기준</small>
             </p>
             <ul class="studio__feature-list">
-              <li data-i18n="studio.feature.opt.format">PLY · USD · STP · STL · GLB · FBX 등 6종 포맷 임포트 및 크로스 변환 지원</li>
+              <li data-i18n="studio.feature.opt.format">PLY<sup>*PLY</sup> · USD · STP · STL · GLB · FBX 등 6종 포맷 임포트 및
+                크로스 변환 지원</li>
               <li data-i18n="studio.feature.opt.metadata">계층 구조 · 태그 · 재질 등 메타데이터 무손실 보존 (Lossless Metadata
                 Preservation)</li>
             </ul>
+            <p class="studio__footnote" style="font-size:0.78em;opacity:0.65;margin-top:1rem;line-height:1.5">
+              * Vertex-GNN: 사전학습 신경망이 아닌, 그래프 신경망(GNN) 방법론에서 착안해 독자 개발한 최적화 엔진입니다.<br />
+              *PLY PLY 포맷 변환 기능은 연구개발 중입니다.
+            </p>
           </div>
         </div>
 
@@ -529,7 +539,7 @@
             </ul>
           </div>
           <div class="studio__feature-visual">
-            <img src="/pmas.png" alt="PM AutoTwin 에셋 매니저 대시보드" class="studio__feature-img" loading="lazy" />
+            <img src="/hub.png" alt="PM AutoTwin 에셋 매니저 대시보드" class="studio__feature-img" loading="lazy" />
           </div>
         </div>
 
@@ -554,50 +564,28 @@
         </p>
       </div>
 
-      <!-- Large Gradient Ring Charts -->
-      <div class="pain__rings" data-reveal>
-        <div class="pain__ring-card">
-          <div class="pain__ring" data-percent="33" data-color="blue">
-            <svg viewBox="0 0 200 200">
-              <defs>
-                <linearGradient id="ringGradBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#00f3ff" />
-                  <stop offset="100%" stop-color="#7c3aed" />
-                </linearGradient>
-              </defs>
-              <circle class="pain__ring-bg" cx="100" cy="100" r="85" />
-              <circle class="pain__ring-fill" cx="100" cy="100" r="85" stroke="url(#ringGradBlue)" data-percent="33" />
-            </svg>
-            <div class="pain__ring-center">
-              <span class="pain__ring-value" data-target="33">0</span><span class="pain__ring-pct">%</span>
-              <span class="pain__ring-frac">1/3</span>
-            </div>
-          </div>
-          <h4 class="pain__ring-title" data-i18n="pain.ring.schedule">일정 점유율</h4>
-          <span class="pain__ring-sub" data-i18n="pain.ring.schedule.sub">OPTIMIZATION WORKLOAD SHARE</span>
-        </div>
 
-        <div class="pain__ring-card">
-          <div class="pain__ring" data-percent="25" data-color="pink">
-            <svg viewBox="0 0 200 200">
-              <defs>
-                <linearGradient id="ringGradPink" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#e879f9" />
-                  <stop offset="100%" stop-color="#7c3aed" />
-                </linearGradient>
-              </defs>
-              <circle class="pain__ring-bg" cx="100" cy="100" r="85" />
-              <circle class="pain__ring-fill" cx="100" cy="100" r="85" stroke="url(#ringGradPink)" data-percent="25" />
-            </svg>
-            <div class="pain__ring-center">
-              <span class="pain__ring-value" data-target="25">0</span><span class="pain__ring-pct">%</span>
-              <span class="pain__ring-frac">1/4</span>
-            </div>
-          </div>
-          <h4 class="pain__ring-title" data-i18n="pain.ring.budget">예산 점유율</h4>
-          <span class="pain__ring-sub" data-i18n="pain.ring.budget.sub">OPTIMIZATION COST SHARE</span>
+      <!-- 5-2: 통계 강조 텍스트 블록 (도넛 차트 대체) -->
+      <div class="pain__stats-block" data-reveal
+        style="display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;margin:2.5rem 0 1.5rem;">
+        <div class="pain__stat-item"
+          style="text-align:center;padding:2rem 2.5rem;background:rgba(0,243,255,0.06);border:1px solid rgba(0,243,255,0.2);border-radius:16px;min-width:220px;">
+          <div style="font-size:3.2rem;font-weight:800;color:var(--cyan);line-height:1;">38<span
+              style="font-size:1.8rem">%</span></div>
+          <div style="font-size:0.95rem;color:var(--text-muted);margin-top:0.6rem;line-height:1.5"
+            data-i18n="pain.stat1.desc" data-i18n-html>3D 데이터 준비가<br />프로젝트 시간에 차지<sup>*1</sup></div>
+        </div>
+        <div class="pain__stat-item"
+          style="text-align:center;padding:2rem 2.5rem;background:rgba(232,121,249,0.06);border:1px solid rgba(232,121,249,0.2);border-radius:16px;min-width:220px;">
+          <div style="font-size:3.2rem;font-weight:800;color:#e879f9;line-height:1;">25<span
+              style="font-size:1.8rem">%</span></div>
+          <div style="font-size:0.95rem;color:var(--text-muted);margin-top:0.6rem;line-height:1.5"
+            data-i18n="pain.stat2.desc" data-i18n-html>개발 공정 품질 이슈의<br />원인이 3D 데이터<sup>*2</sup></div>
         </div>
       </div>
+      <p style="text-align:center;font-size:0.78rem;opacity:0.55;margin-bottom:1.5rem;" data-i18n="pain.stats.sources">
+        *1 Siemens Tech-Clarity
+        &nbsp;/&nbsp; *2 McKinsey &amp; Company</p>
 
       <p class="pain__note" data-reveal data-i18n="pain.note">수동 최적화는 복잡한 자산의 경우 수시간에서 수일 소요 ⓘ</p>
 
@@ -610,8 +598,9 @@
       <div class="pain__benefits" data-reveal>
         <div class="pain__benefit-card">
           <span class="pain__benefit-tag pain__benefit-tag--cyan" data-i18n="pain.benefit.1.tag">TIME-TO-VALUE</span>
-          <h4 class="pain__benefit-title" data-i18n="pain.benefit.1.title">가치 도달 시간 10배 단축</h4>
-          <p class="pain__benefit-desc" data-i18n="pain.benefit.1.desc">업로드에서 실시간 자산까지, 경쟁사 대비 10배 빠른 결과 도출</p>
+          <h4 class="pain__benefit-title" data-i18n="pain.benefit.1.title">글로벌 리딩 툴 대비 평균 4.4배 빠른 결과</h4>
+          <p class="pain__benefit-desc" data-i18n="pain.benefit.1.desc" data-i18n-html>업로드에서 실시간 자산까지, 글로벌 리딩 툴 대비 평균
+            4.4배 빠른 결과 도출<small style="font-size:0.78em">*Car engine(132MB) 파일 기준, 2026.02 자체 벤치마크</small></p>
         </div>
         <div class="pain__benefit-card">
           <span class="pain__benefit-tag pain__benefit-tag--green" data-i18n="pain.benefit.2.tag">ZERO-TOUCH</span>
@@ -639,117 +628,108 @@
           같은 최적화율, 우리는<br /><em>원형</em>을 지킵니다.
         </h2>
         <p class="section__desc" data-i18n="precision.desc" data-i18n-html>
-          같은 70% 경량화를 해도 결과는 다릅니다.<br />
-          PM AutoTwin은 <strong>더 빠른 속도</strong>와 <strong>독보적인 원형보존율</strong>을 동시에 달성합니다.<br />
-          자체 검증 툴 <strong>'PM OmniMetric'</strong>이 원형보존율을 소수점까지 정량 측정합니다.
+          같은 60% 경량화를 해도 결과는 다릅니다.<br />
+          PM AutoTwin은 <strong>97.64/100</strong>, 글로벌 리딩 툴은 <strong>80.98/100</strong>.<br />
+          자체 검증 툴 <strong>'PM OmniMetric'</strong>이 변환 전후의 원형보존율을<br />
+          소수점까지 정량 측정합니다.
         </p>
       </div>
 
       <!-- pmo.png 이미지 + 오버레이 점수 -->
       <div class="precision__visual" data-reveal>
         <div class="precision__image-wrap">
-          <img src="/pmo.png" alt="글로벌 경쟁사 vs PM AutoTwin 형상 오차 히트맵" class="precision__image" loading="lazy" />
+          <img src="/omi.jpg" alt="글로벌 리딩 툴 vs PM AutoTwin 형상 오차 히트맵" class="precision__image" loading="lazy" />
           <div class="precision__image-overlay">
-            <span class="precision__image-tag precision__image-tag--left" data-i18n="precision.competitor.label">글로벌 경쟁사
-              (M***)</span>
+            <span class="precision__image-tag precision__image-tag--left" data-i18n="precision.competitor.label">글로벌 리딩
+              툴</span>
             <span class="precision__image-tag precision__image-tag--right">PM AutoTwin</span>
           </div>
         </div>
         <!-- 이미지 아래 총점 오버레이 -->
         <div class="precision__score-row" data-reveal>
           <div class="precision__score-pill precision__score-pill--bad">
-            <span class="precision__sp-label" data-i18n="precision.score.competitor">M*** 원형보존 점수</span>
-            <span class="precision__sp-num" data-count-decimal="56.23">0</span>
+            <span class="precision__sp-label" data-i18n="precision.score.competitor">글로벌 리딩 툴 원형보존 점수</span>
+            <span class="precision__sp-num" data-count-decimal="80.98">0</span>
           </div>
           <div class="precision__score-pill precision__score-pill--good">
             <span class="precision__sp-label" data-i18n="precision.score.pm">PM AutoTwin 원형보존 점수</span>
-            <span class="precision__sp-num" data-count-decimal="70.76">0</span>
+            <span class="precision__sp-num" data-count-decimal="97.64">0</span>
           </div>
         </div>
       </div>
 
-      <!-- KPI 비교 카드 (각 카드 안에 비교 바) -->
+      <!-- KPI 비교 카드 3개 — PM OmniMetric 리포트(2026-06-17) 기준 -->
       <div class="precision__kpis" data-reveal>
         <div class="precision__kpi-card precision__kpi-card--highlight">
           <span class="precision__kpi-icon">🏆</span>
-          <div class="precision__kpi-title" data-i18n="precision.kpi1.title">형상 정밀도 (F1 Score)</div>
+          <div class="precision__kpi-title" data-i18n="precision.kpi1.title">원형보존 종합점수 (Fidelity Score)</div>
           <div class="precision__kpi-compare">
             <div class="precision__kpi-row">
               <span class="precision__kpi-who precision__kpi-who--us">PM</span>
               <div class="precision__kpi-bar-track">
-                <div class="precision__bar-fill precision__bar-fill--good" data-width="57"><span>11.35%</span></div>
+                <div class="precision__bar-fill precision__bar-fill--good" data-width="97"><span>97.64</span></div>
               </div>
             </div>
             <div class="precision__kpi-row">
-              <span class="precision__kpi-who precision__kpi-who--them">M***</span>
+              <span class="precision__kpi-who precision__kpi-who--them" data-i18n="precision.competitor.label">글로벌 리딩
+                툴</span>
               <div class="precision__kpi-bar-track">
-                <div class="precision__bar-fill precision__bar-fill--bad" data-width="24"><span>4.8%</span></div>
+                <div class="precision__bar-fill precision__bar-fill--bad" data-width="80"><span>80.98</span></div>
               </div>
             </div>
           </div>
-          <div class="precision__kpi-badge" data-i18n="precision.kpi1.badge">236% 우수</div>
+          <div class="precision__kpi-badge" data-i18n="precision.kpi1.badge">+16.66점 우수</div>
+        </div>
+
+        <div class="precision__kpi-card precision__kpi-card--highlight">
+          <span class="precision__kpi-icon">🎨</span>
+          <div class="precision__kpi-title" data-i18n="precision.kpi2.title">텍스처 보존율 (Texture Visual Score)</div>
+          <div class="precision__kpi-compare">
+            <div class="precision__kpi-row">
+              <span class="precision__kpi-who precision__kpi-who--us">PM</span>
+              <div class="precision__kpi-bar-track">
+                <div class="precision__bar-fill precision__bar-fill--good" data-width="99"><span>99.04%</span></div>
+              </div>
+            </div>
+            <div class="precision__kpi-row">
+              <span class="precision__kpi-who precision__kpi-who--them" data-i18n="precision.competitor.label">글로벌 리딩
+                툴</span>
+              <div class="precision__kpi-bar-track">
+                <div class="precision__bar-fill precision__bar-fill--bad" data-width="53"><span>53.75%</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="precision__kpi-badge precision__kpi-badge--green" data-i18n="precision.kpi2.badge">+45.29%p 우수
+          </div>
         </div>
 
         <div class="precision__kpi-card precision__kpi-card--highlight">
           <span class="precision__kpi-icon">🛡️</span>
-          <div class="precision__kpi-title" data-i18n="precision.kpi2.title">메쉬 무결성 (PNWE)</div>
+          <div class="precision__kpi-title" data-i18n="precision.kpi3.title">구조 무결성 (PNWE — Non-Watertight)</div>
           <div class="precision__kpi-compare">
             <div class="precision__kpi-row">
               <span class="precision__kpi-who precision__kpi-who--us">PM</span>
               <div class="precision__kpi-bar-track">
-                <div class="precision__bar-fill precision__bar-fill--good" data-width="5"><span>0.42%</span></div>
+                <div class="precision__bar-fill precision__bar-fill--good" data-width="1"><span>0.03%</span></div>
               </div>
             </div>
             <div class="precision__kpi-row">
-              <span class="precision__kpi-who precision__kpi-who--them">M***</span>
+              <span class="precision__kpi-who precision__kpi-who--them" data-i18n="precision.competitor.label">글로벌 리딩
+                툴</span>
               <div class="precision__kpi-bar-track">
-                <div class="precision__bar-fill precision__bar-fill--bad" data-width="73"><span>46.17%</span></div>
+                <div class="precision__bar-fill precision__bar-fill--bad" data-width="93"><span>30.95%</span></div>
               </div>
             </div>
           </div>
-          <div class="precision__kpi-badge precision__kpi-badge--green" data-i18n="precision.kpi2.badge">100× 안전</div>
-        </div>
-
-        <div class="precision__kpi-card">
-          <span class="precision__kpi-icon">📐</span>
-          <div class="precision__kpi-title" data-i18n="precision.kpi3.title">평균 형상 오차</div>
-          <div class="precision__kpi-compare">
-            <div class="precision__kpi-row">
-              <span class="precision__kpi-who precision__kpi-who--us">PM</span>
-              <div class="precision__kpi-bar-track">
-                <div class="precision__bar-fill precision__bar-fill--good" data-width="24"><span>3.43mm</span></div>
-              </div>
-            </div>
-            <div class="precision__kpi-row">
-              <span class="precision__kpi-who precision__kpi-who--them">M***</span>
-              <div class="precision__kpi-bar-track">
-                <div class="precision__bar-fill precision__bar-fill--bad" data-width="82"><span>11.47mm</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="precision__kpi-badge" data-i18n="precision.kpi3.badge">3.3× 정밀</div>
-        </div>
-
-        <div class="precision__kpi-card">
-          <span class="precision__kpi-icon">👁️</span>
-          <div class="precision__kpi-title" data-i18n="precision.kpi4.title">시각적 유사도 (SSIM)</div>
-          <div class="precision__kpi-compare">
-            <div class="precision__kpi-row">
-              <span class="precision__kpi-who precision__kpi-who--us">PM</span>
-              <div class="precision__kpi-bar-track">
-                <div class="precision__bar-fill precision__bar-fill--good" data-width="88"><span>88.26%</span></div>
-              </div>
-            </div>
-            <div class="precision__kpi-row">
-              <span class="precision__kpi-who precision__kpi-who--them">M***</span>
-              <div class="precision__kpi-bar-track">
-                <div class="precision__bar-fill precision__bar-fill--bad" data-width="76"><span>76.26%</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="precision__kpi-badge" data-i18n="precision.kpi4.badge">15.7% ↑</div>
+          <div class="precision__kpi-badge" data-i18n="precision.kpi3.badge">1,031× 안전</div>
         </div>
       </div>
+
+      <!-- 공통 각주 -->
+      <p style="text-align:center;font-size:0.78rem;opacity:0.55;margin-top:1.5rem;" data-i18n="precision.disclaimer"
+        data-i18n-html>
+        *동일 60% 최적화 조건, PM OmniMetric 분석 리포트(2026.06.17) 기준
+      </p>
 
       <!-- 섹션 하단 강조 -->
       <div class="precision__bottom-highlight" data-reveal>
@@ -758,6 +738,23 @@
 
     </div>
   </section>
+
+  <!-- 6-5: 신규 CTA — 6번 섹션과 7번 섹션 사이 -->
+  <section class="section"
+    style="padding:3rem 0;text-align:center;background:rgba(0,243,255,0.03);border-top:1px solid rgba(0,243,255,0.1);border-bottom:1px solid rgba(0,243,255,0.1);">
+    <div class="container">
+      <a href="https://studio-workspace.pmautotwin.com/" target="_blank" rel="noopener noreferrer"
+        class="hero__cta hero__cta--primary"
+        style="font-size:1.1rem;padding:1rem 2.5rem;display:inline-flex;align-items:center;gap:0.5rem;">
+        <span data-i18n="precision.cta">내 파일로 직접 확인해보기</span>
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+          <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
 
   <!-- Cinema mode overlay (비디오 시네마) -->
   <div class="video-showcase__cinema" id="videoCinema">
@@ -832,8 +829,9 @@
         </h2>
         <p class="section__desc" data-i18n="trust.desc" data-i18n-html>
           어떤 3D가 진짜 '잘 만들어진' 데이터인지 헷갈리셨나요?<br /><br />
-          오토트윈은 국제표준화기구 IEEE에 <strong>3D 품질 측정 및 최적화 표준 프로젝트(PAR)를 직접 공식 제안(제출)</strong>하여,<br />
-          글로벌 표준의 새로운 청사진을 그리고 있습니다.<br /><br />
+          오토트윈은 국제표준화기구 IEEE에 <strong>3D 품질 측정 및 최적화 표준(P3079.5/6) 제안을 준비하고 있습니다.</strong><br />
+          아직 아무도 정의하지 않은 3D 품질의 기준,<br />
+          그 첫 제안자가 되기 위한 과정입니다.<br /><br />
           전 세계가 주목하는 차세대 표준 프로젝트에 귀사의 데이터를 맡기세요.
         </p>
       </div>
@@ -841,9 +839,9 @@
       <div class="trust__ieee-center" data-reveal>
         <div class="trust__ieee-card">
           <div class="trust__ieee-inner">
-            <span class="trust__ieee-label" data-i18n="trust.ieee.label">IEEE P3079.6</span>
-            <span class="trust__ieee-title" data-i18n="trust.ieee.title">Proposed Reference SW</span>
-            <span class="trust__ieee-sub" data-i18n="trust.ieee.sub">국제 표준(안) 참조 소프트웨어</span>
+            <span class="trust__ieee-label" data-i18n="trust.ieee.label">IEEE P3079.5/6</span>
+            <span class="trust__ieee-title" data-i18n="trust.ieee.title">Standard Proposal in Preparation</span>
+            <span class="trust__ieee-sub" data-i18n="trust.ieee.sub">표준 제안 준비 중</span>
           </div>
         </div>
         <div class="trust__ieee-stats">
@@ -851,8 +849,8 @@
               class="trust__ieee-stat-label" data-i18n="trust.ieee.stat1.label">3D 품질 측정 표준(안)</span></div>
           <div class="trust__ieee-stat"><span class="trust__ieee-stat-num">P3079.6</span><span
               class="trust__ieee-stat-label" data-i18n="trust.ieee.stat2.label">3D 최적화 표준(안)</span></div>
-          <div class="trust__ieee-stat"><span class="trust__ieee-stat-num" data-i18n="trust.ieee.stat3.num">IEEE PAR
-              제안</span><span class="trust__ieee-stat-label" data-i18n="trust.ieee.stat3.label">표준 프로젝트 공식 발의</span>
+          <div class="trust__ieee-stat"><span class="trust__ieee-stat-num" data-i18n="trust.ieee.stat3.num">PAR 제출
+              준비 중</span><span class="trust__ieee-stat-label" data-i18n="trust.ieee.stat3.label">표준 프로젝트 제안 준비</span>
           </div>
         </div>
       </div>
@@ -920,27 +918,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       AUTOTWIN LITE — 경량 제품 소개 배너
-       ═══════════════════════════════════════════════════════════ -->
-  <section class="section autotwin-banner">
-    <div class="container">
-      <div class="autotwin-banner__inner" data-reveal>
-        <div class="autotwin-banner__icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-        <div class="autotwin-banner__content">
-          <h3 class="autotwin-banner__title" data-i18n="autotwin.banner.title">효율적 비용으로 빠르게 3D 최적화만 필요하다면?</h3>
-          <p class="autotwin-banner__desc" data-i18n="autotwin.banner.desc">SaaS 기반 경량화 전문 서비스 — 더 편하게, 더 합리적으로.</p>
-        </div>
-        <button class="autotwin-banner__cta" id="autotwinBannerCta" data-i18n="autotwin.banner.cta">
-          AutoTwin 알아보기
-        </button>
-      </div>
-    </div>
-  </section>
+
 
   <!-- AutoTwin 소개 팝업 모달 -->
   <div class="autotwin-popup" id="autotwinPopup">
@@ -1059,10 +1037,41 @@
                 수집합니다)
               </label>
             </div>
-            <button type="submit" class="cta__form-submit" data-i18n="cta.form.submit">상담 신청하기</button>
+            <div class="cta__form-buttons">
+              <a href="https://studio-workspace.pmautotwin.com/" target="_blank" rel="noopener noreferrer"
+                class="cta__form-start-btn">Start PM AutoTwin Studio</a>
+              <button type="submit" class="cta__form-submit" data-i18n="cta.form.submit">상담 신청하기</button>
+            </div>
             <div class="cta__form-status" id="cta-form-status"></div>
           </form>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       AUTOTWIN LITE — 경량 제품 소개 배너 (푸터 직전으로 이동)
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="section autotwin-banner">
+    <div class="container">
+      <div class="autotwin-banner__inner" data-reveal>
+        <div class="autotwin-banner__icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="autotwin-banner__content">
+          <h3 class="autotwin-banner__title" data-i18n="autotwin.banner.title">효율적 비용으로 빠르게 3D 최적화만 필요하다면?</h3>
+          <p class="autotwin-banner__desc" data-i18n="autotwin.banner.desc">SaaS 기반 경량화 전문 서비스 — 더 편하게, 더 합리적으로.</p>
+        </div>
+        <a href="https://www.pmautotwin.com/" target="_blank" rel="noopener noreferrer"
+          class="hero__cta hero__cta--primary" style="white-space:nowrap;font-size:1rem;padding:0.85rem 2rem;">
+          <span data-i18n="autotwin.banner.cta">오토트윈 무료로 시작하기</span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+            <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
       </div>
     </div>
   </section>
@@ -1110,9 +1119,44 @@
         </div>
       </div>
 
+      <!-- 신규 SNS 행 추가 (저작권 줄 바로 위) -->
+      <div class="footer__sns">
+        <!-- LinkedIn (전체 언어) -->
+        <a href="https://www.linkedin.com/in/cho3d/" target="_blank" rel="noopener noreferrer"
+          class="footer__sns-link footer__sns-link--linkedin" title="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+        <!-- Facebook (전체 언어) -->
+        <a href="https://www.facebook.com/pocket3d" target="_blank" rel="noopener noreferrer"
+          class="footer__sns-link footer__sns-link--facebook" title="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+          </svg>
+        </a>
+        <!-- Medium (EN/JA 노출) -->
+        <a href="https://medium.com/@pocketmemory1" target="_blank" rel="noopener noreferrer"
+          class="footer__sns-link footer__sns-link--medium" title="Medium" data-sns-lang="en ja">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M2.846 5.887c.03-.187-.043-.377-.188-.508L.548 3.077v-.36h6.859l5.3 11.64 4.707-11.64h6.586v.36l-2.016 1.933c-.144.11-.212.296-.178.473v13.064c-.034.177.034.364.178.474l1.979 1.933v.36h-9.277v-.36l1.996-1.921c.197-.197.197-.253.197-.547V7.575l-5.617 14.28h-.877L4.76 7.575v8.718c-.04.284.053.568.254.767l2.5 3.036v.36H.004v-.36l2.5-3.036c.193-.207.28-.497.234-.777l-.008-9.84c-.015-.03-.024-.064-.024-.099z" />
+          </svg>
+        </a>
+        <!-- 네이버 블로그 (KO 노출) -->
+        <a href="https://blog.naver.com/pocketmemory" target="_blank" rel="noopener noreferrer"
+          class="footer__sns-link footer__sns-link--naver" title="Naver Blog" data-sns-lang="ko">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.273 12.845L7.37 0H0v24h7.727v-12.845L16.63 24H24V0h-7.727v12.845z" />
+          </svg>
+        </a>
+      </div>
+
       <!-- 하단 카피라이트 -->
       <div class="footer__bottom">
-        <p class="footer__copyright" data-i18n="footer.copyright" data-i18n-html>© 2025 <a
+        <p class="footer__copyright" data-i18n="footer.copyright" data-i18n-html>© 2026 <a
             href="https://www.pocketmemory.co.kr/" target="_blank" class="footer__pm-link">POCKET MEMORY</a> Inc. All
           rights reserved.</p>
       </div>
