@@ -865,13 +865,7 @@ function initVideoShowcase() {
   if (!thumb || !embed) return;
 
   function getVideoId() {
-    // 영문/일문용 전용 비디오 ID(WKhcYuFlre4)가 유효하지 않으므로, 준비될 때까지 통합 시연 영상(pC7eHKDvC78)을 공용 제공합니다.
-    const videoIds = {
-      ko: 'pC7eHKDvC78',
-      en: 'pC7eHKDvC78',
-      ja: 'pC7eHKDvC78'
-    };
-    return videoIds[getLang()] || 'pC7eHKDvC78';
+    return getLang() === 'ko' ? 'pC7eHKDvC78' : 'WKhcYuFlre4';
   }
 
   function getEmbedUrl(autoplay = true) {
@@ -882,7 +876,10 @@ function initVideoShowcase() {
   const origSetLang = window.__videoLangWatcher;
   function updateThumbForLang() {
     if (thumbImg && thumb.style.display !== 'none') {
-      thumbImg.src = `https://img.youtube.com/vi/${getVideoId()}/maxresdefault.jpg`;
+      const vid = getVideoId();
+      // 영문 비디오인 WKhcYuFlre4는 고해상도 maxresdefault가 없으므로 hqdefault를 사용합니다.
+      const resolution = vid === 'WKhcYuFlre4' ? 'hqdefault' : 'maxresdefault';
+      thumbImg.src = `https://img.youtube.com/vi/${vid}/${resolution}.jpg`;
     }
   }
   // Watch for language changes via MutationObserver on html lang
