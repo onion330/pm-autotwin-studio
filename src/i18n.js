@@ -178,6 +178,27 @@ const translations = {
     'footer.legal.privacy': '개인정보 처리방침',
     'footer.legal.terms': '서비스 이용약관',
     'footer.copyright': '© 2026 <a href="https://www.pocketmemory.co.kr/" target="_blank" class="footer__pm-link">POCKET MEMORY</a> Inc. All rights reserved.',
+    'hero.footnote': '*Sandia National Labs 연구 기준 / 경량 샘플 파일 기준 최대 처리 속도',
+    'studio.feature.opt.footnote.gnn': '* Vertex-GNN: 사전학습 신경망이 아닌, 그래프 신경망(GNN) 방법론에서 착안해 독자 개발한 최적화 엔진입니다.',
+    'studio.feature.opt.footnote.ply': '*PLY PLY 포맷 변환 기능은 연구개발 중입니다.',
+    'footer.tel': 'Tel: 02-2088-1855',
+    'footer.address': 'Address: 서울특별시 영등포구 문래동6가 33 에이스엔에스타워 1216호',
+    'seo.title': 'PM AutoTwin Studio — 무거운 3D 데이터, 클릭 한 번으로 가벼운 \'자산\'이 됩니다.',
+    'seo.description': 'PM AutoTwin Studio는 독자적 GNN 알고리즘과 IEEE 표준이 결합된 글로벌 3D 자산 관리 OS입니다. 98% 폴리곤 최적화, 82% 원형 보존, 15초 처리.',
+    'seo.keywords': 'PM AutoTwin, 3D 최적화, 디지털 트윈, GNN, IEEE, 3D 자산 관리, POCKET MEMORY, 포켓메모리, digital twin, 3D optimization, mesh optimization',
+    'seo.og.title': 'PM AutoTwin Studio — 3D 자산 관리 OS',
+    'seo.og.description': '독자적 GNN 알고리즘과 IEEE 표준이 결합된 글로벌 3D 자산 관리 OS. 98% 폴리곤 최적화, 82% 원형 보존.',
+    'studio.feature.usd.tag': 'OPENUSD PIPELINE',
+    'studio.feature.usd.title': 'CAD에서 Omniverse까지,<br />단 하나의 파이프라인으로 연결합니다.',
+    'studio.feature.usd.desc': 'NVIDIA Omniverse나 Isaac Sim을 위한 필수 관문. 무거운 설계 CAD 파일을 시뮬레이션에 맞춰 경량화하고 OpenUSD로 변환하는 복잡한 전처리를 하나의 프로세스로 통합했습니다.',
+    'studio.feature.usd.metric.poly': 'Polygons: 831,790 → 236,654 (-72%)',
+    'studio.feature.usd.metric.vert': 'Vertices: 488,669 → 150,654 (-69%)',
+    'studio.feature.usd.metric.size': 'File Size: 5.84 MB → 2.44 MB (-58%)',
+    'studio.feature.usd.metric.time': 'Time: 6.4초',
+    'studio.feature.usd.list1': 'STEP · FBX · OBJ · GLB의 AI 최적화와 동시에 계층 보존 OpenUSD로 출력',
+    'studio.feature.usd.list2': '모든 서브어셈블리 및 개별 파트 명칭의 완벽한 무손실 유지',
+    'studio.feature.usd.footnote': '*USD 출력은 현재 Beta 기능이며, 단일 어셈블리 테스트 기준 결과입니다.',
+    'studio.usd.badge': 'NVIDIA Omniverse · OpenUSD Beta',
   },
 
   en: {
@@ -289,10 +310,10 @@ const translations = {
     'trust.ieee.label': 'IEEE P3079.5/6',
     'trust.ieee.title': 'Standard Proposal in Preparation',
     'trust.ieee.sub': 'Preparing to Propose Standard',
-    'trust.ieee.stat1.label': '3D Quality Standard (Proposed)',
-    'trust.ieee.stat2.label': '3D Optimization Standard (Proposed)',
+    'trust.ieee.stat1.label': '3D Quality Standard (Draft)',
+    'trust.ieee.stat2.label': '3D Optimization Standard (Draft)',
     'trust.ieee.stat3.num': 'PAR Submission in Prep',
-    'trust.ieee.stat3.label': 'Standard Proposal in Progress',
+    'trust.ieee.stat3.label': 'Standard Proposal in Preparation',
     'trust.results.title': 'Technology proven by <em>numbers</em>',
     'trust.result1.company': 'Hyundai Motor HMGICS',
     'trust.result1.desc': 'Logistics digital twin',
@@ -355,6 +376,27 @@ const translations = {
     'footer.legal.privacy': 'Privacy Policy',
     'footer.legal.terms': 'Terms of Service',
     'footer.copyright': '© 2026 <a href="https://www.pocketmemory.co.kr/" target="_blank" class="footer__pm-link">POCKET MEMORY</a> Inc. All rights reserved.',
+    'hero.footnote': '*Based on Sandia National Labs research / Max processing speed for lightweight sample file',
+    'studio.feature.opt.footnote.gnn': '* Vertex-GNN: An optimization engine developed in-house, inspired by Graph Neural Network (GNN) methodology rather than a pre-trained neural network.',
+    'studio.feature.opt.footnote.ply': '*PLY PLY format conversion is under R&D.',
+    'footer.tel': 'Tel: +82-2-2088-1855',
+    'footer.address': 'Address: ACE N.S Tower #1216, 33 Munrae-dong 6-ga, Yeongdeungpo-gu, Seoul, Korea',
+    'seo.title': 'PM AutoTwin Studio — Lightweight 3D assets in 1 minute.',
+    'seo.description': 'PM AutoTwin Studio is a global 3D asset management OS combining a proprietary GNN algorithm and IEEE standards. 98% polygon optimization, 82% shape preservation, 15s processing.',
+    'seo.keywords': 'PM AutoTwin, 3D optimization, digital twin, GNN, IEEE, 3D asset management, POCKET MEMORY, digital twin, mesh optimization',
+    'seo.og.title': 'PM AutoTwin Studio — 3D Asset Management OS',
+    'seo.og.description': 'Global 3D asset management OS combining a proprietary GNN algorithm and IEEE standards. 98% polygon optimization, 82% shape preservation.',
+    'studio.feature.usd.tag': 'OPENUSD PIPELINE',
+    'studio.feature.usd.title': 'From CAD to Omniverse:<br />Connected in a single, simple pipeline.',
+    'studio.feature.usd.desc': 'A crucial gateway for NVIDIA Omniverse & Isaac Sim. We unified the complex workflow of CAD conversion, mesh decimation, and OpenUSD export into a single, seamless step.',
+    'studio.feature.usd.metric.poly': 'Polygons: 831,790 → 236,654 (-72%)',
+    'studio.feature.usd.metric.vert': 'Vertices: 488,669 → 150,654 (-69%)',
+    'studio.feature.usd.metric.size': 'File Size: 5.84 MB → 2.44 MB (-58%)',
+    'studio.feature.usd.metric.time': 'Time: 6.4s',
+    'studio.feature.usd.list1': 'AI optimization of STEP / FBX / OBJ / GLB with instant OpenUSD schema mapping',
+    'studio.feature.usd.list2': 'Complete sub-assembly and part names retained without loss',
+    'studio.feature.usd.footnote': '*USD output is currently a Beta feature, based on a single assembly test.',
+    'studio.usd.badge': 'NVIDIA Omniverse · OpenUSD Beta',
   },
 
   ja: {
@@ -532,6 +574,27 @@ const translations = {
     'footer.legal.privacy': 'プライバシーポリシー',
     'footer.legal.terms': '利用規約',
     'footer.copyright': '© 2026 <a href="https://www.pocketmemory.co.kr/" target="_blank" class="footer__pm-link">POCKET MEMORY</a> Inc. All rights reserved.',
+    'hero.footnote': '*Sandia National Labsの研究基準 / 軽量サンプルファイル基準の最大速度',
+    'studio.feature.opt.footnote.gnn': '* Vertex-GNN: 事前学習されたニューラルネットワークではなく、グラフニューラルネットワーク(GNN)の手法に着想を得て独自開発した最適化エンジンです。',
+    'studio.feature.opt.footnote.ply': '*PLY PLYフォーマットの変換機能は研究開発中です。',
+    'footer.tel': 'Tel: +82-2-2088-1855',
+    'footer.address': 'Address: 韓国ソウル特別市永登浦区文来洞6街33 ACE N.Sタワー1216号',
+    'seo.title': 'PM AutoTwin Studio — 重い3Dデータをワンクリックで軽量な「資産」へ。',
+    'seo.description': 'PM AutoTwin Studioは、独自のGNNアルゴリズムとIEEE標準が統合されたグローバル3Dアセット管理OSです。 98%ポリゴン最適化、82%原型保存、15秒処理。',
+    'seo.keywords': 'PM AutoTwin, 3D最適化, デジタルツイン, GNN, IEEE, 3Dアセット管理, POCKET MEMORY, mesh optimization',
+    'seo.og.title': 'PM AutoTwin Studio — 3Dアセット管理OS',
+    'seo.og.description': '独自のGNNアルゴリズムとIEEE標準が統合されたグローバル3Dアセット管理OS。98%ポリゴン最適化、82%原型保存過ど。',
+    'studio.feature.usd.tag': 'OPENUSD PIPELINE',
+    'studio.feature.usd.title': 'CADからOmniverseまで、<br />単一のパイプラインで接続します。',
+    'studio.feature.usd.desc': 'NVIDIA OmniverseやIsaac Simに不可欠なゲートウェイ。重い設計CADファイルをシミュレーションに適合させて軽量化し、OpenUSDへと変換する複雑な前処理を1つのシームレスなプロセスに統合しました。',
+    'studio.feature.usd.metric.poly': 'Polygons: 831,790 → 236,654 (-72%)',
+    'studio.feature.usd.metric.vert': 'Vertices: 488,669 → 150,654 (-69%)',
+    'studio.feature.usd.metric.size': 'File Size: 5.84 MB → 2.44 MB (-58%)',
+    'studio.feature.usd.metric.time': 'Time: 6.4秒',
+    'studio.feature.usd.list1': 'STEP · FBX · OBJ · GLBのAI最適化と同時に、階層構造を保持したOpenUSDを出力',
+    'studio.feature.usd.list2': 'すべてのサブアセンブリおよび個体パート名の完全なロスレス維持',
+    'studio.feature.usd.footnote': '*USD出力は現在ベータ版機能であり、単一アセンブリのテスト基準結果です。',
+    'studio.usd.badge': 'NVIDIA Omniverse · OpenUSD Beta',
   }
 };
 
@@ -542,6 +605,27 @@ export function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('pm-autotwin-lang', lang);
   document.documentElement.lang = lang === 'ja' ? 'ja' : lang === 'en' ? 'en' : 'ko';
+
+  // SEO Title & Meta Description dynamic translation
+  if (translations[lang]['seo.title']) {
+    document.title = translations[lang]['seo.title'];
+  }
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && translations[lang]['seo.description']) {
+    metaDesc.setAttribute('content', translations[lang]['seo.description']);
+  }
+  const metaKey = document.querySelector('meta[name="keywords"]');
+  if (metaKey && translations[lang]['seo.keywords']) {
+    metaKey.setAttribute('content', translations[lang]['seo.keywords']);
+  }
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle && translations[lang]['seo.og.title']) {
+    ogTitle.setAttribute('content', translations[lang]['seo.og.title']);
+  }
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc && translations[lang]['seo.og.description']) {
+    ogDesc.setAttribute('content', translations[lang]['seo.og.description']);
+  }
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');

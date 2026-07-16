@@ -225,8 +225,8 @@
       <p class="hero__subtitle" data-i18n="hero.subtitle" data-i18n-html>
         무거운 CAD 파일, 1분 만에 가벼운 ‘자산’이 됩니다.
       </p>
-      <p class="hero__footnote" style="font-size:0.8rem;opacity:0.6;margin-top:0.5rem;">*Sandia National Labs 연구 기준 / 경량
-        샘플 파일 기준 최대 처리 속도</p>
+      <p class="hero__footnote" style="font-size:0.8rem;opacity:0.6;margin-top:0.5rem;" data-i18n="hero.footnote">
+        *Sandia National Labs 연구 기준 / 경량 샘플 파일 기준 최대 처리 속도</p>
 
       <!-- Live transform metrics -->
       <div class="hero__metrics" id="heroMetrics">
@@ -467,14 +467,84 @@
                 Preservation)</li>
             </ul>
             <p class="studio__footnote" style="font-size:0.78em;opacity:0.65;margin-top:1rem;line-height:1.5">
-              * Vertex-GNN: 사전학습 신경망이 아닌, 그래프 신경망(GNN) 방법론에서 착안해 독자 개발한 최적화 엔진입니다.<br />
-              *PLY PLY 포맷 변환 기능은 연구개발 중입니다.
+              <span data-i18n="studio.feature.opt.footnote.gnn">* Vertex-GNN: 사전학습 신경망이 아닌, 그래프 신경망(GNN) 방법론에서 착안해 독자
+                개발한 최적화 엔진입니다.</span><br />
+              <span data-i18n="studio.feature.opt.footnote.ply">*PLY PLY 포맷 변환 기능은 연구개발 중입니다.</span>
             </p>
+          </div>
+        </div>
+
+        <!-- OpenUSD Pipeline -->
+        <div class="studio__feature-card studio__feature-card--usd">
+          <div class="studio__feature-content">
+            <span class="studio__feature-tag studio__feature-tag--blue"
+              style="color:var(--cyan); border-color:var(--cyan);" data-i18n="studio.feature.usd.tag">OPENUSD
+              PIPELINE</span>
+            <h3 class="studio__feature-title" data-i18n="studio.feature.usd.title" data-i18n-html>CAD에서
+              Omniverse까지,<br />단 하나의 파이프라인으로 연결합니다.</h3>
+            <p class="studio__feature-desc" data-i18n="studio.feature.usd.desc" data-i18n-html>
+              NVIDIA Omniverse나 Isaac Sim을 위한 필수 관문. 무거운 설계 CAD 파일을 시뮬레이션에 맞춰 경량화하고 OpenUSD로 변환하는 복잡한 전처리를 하나의 프로세스로
+              통합했습니다.
+            </p>
+
+            <div class="usd-metrics-grid"
+              style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 1.5rem 0;">
+              <div class="usd-metric-box"
+                style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:10px; border-radius:6px;">
+                <div style="font-size:0.75rem; opacity:0.6;">Gearbox Optimization (STEP)</div>
+                <div style="font-size:0.85rem; font-weight:600; color:var(--cyan); margin-top:4px;"
+                  data-i18n="studio.feature.usd.metric.poly">Polygons: 831,790 → 236,654 (-72%)</div>
+              </div>
+              <div class="usd-metric-box"
+                style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:10px; border-radius:6px;">
+                <div style="font-size:0.75rem; opacity:0.6;">Hierarchy Retention</div>
+                <div style="font-size:0.85rem; font-weight:600; color:var(--cyan); margin-top:4px;"
+                  data-i18n="studio.feature.usd.metric.vert">Vertices: 488,669 → 150,654 (-69%)</div>
+              </div>
+              <div class="usd-metric-box"
+                style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:10px; border-radius:6px;">
+                <div style="font-size:0.75rem; opacity:0.6;">Compression Rate</div>
+                <div style="font-size:0.85rem; font-weight:600; color:var(--cyan); margin-top:4px;"
+                  data-i18n="studio.feature.usd.metric.size">File Size: 5.84 MB → 2.44 MB (-58%)</div>
+              </div>
+              <div class="usd-metric-box"
+                style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:10px; border-radius:6px;">
+                <div style="font-size:0.75rem; opacity:0.6;">Total Processing Time</div>
+                <div style="font-size:0.85rem; font-weight:600; color:var(--cyan); margin-top:4px;"
+                  data-i18n="studio.feature.usd.metric.time">Time: 6.4s</div>
+              </div>
+            </div>
+
+            <ul class="studio__feature-list">
+              <li data-i18n="studio.feature.usd.list1">STEP · FBX · OBJ · GLB의 AI 최적화와 동시에 계층 보존 OpenUSD로 출력</li>
+              <li data-i18n="studio.feature.usd.list2">모든 서브어셈블리 명칭 및 규격 메타데이터의 완벽한 무손실 유지</li>
+            </ul>
+            <p class="studio__footnote" style="font-size:0.78em;opacity:0.65;margin-top:1rem;line-height:1.5">
+              <span data-i18n="studio.feature.usd.footnote">*USD 출력은 현재 Beta 기능이며, 단일 어셈블리 테스트 기준 결과입니다.</span>
+            </p>
+          </div>
+          <div class="studio__feature-visual studio__feature-visual--ply studio__feature-visual--usd">
+            <img src="/openusd_1.gif" alt="OpenUSD Pipeline Optimization" class="studio__feature-img" loading="lazy" />
+            <div class="ply-overlay">
+              <div class="ply-overlay__badge">
+                <span class="ply-overlay__icon">⚡</span>
+                <span data-i18n="studio.usd.badge">NVIDIA Omniverse · Isaac Sim Ready</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- PLY Scan Data Gateway -->
         <div class="studio__feature-card studio__feature-card--ply">
+          <div class="studio__feature-visual studio__feature-visual--ply">
+            <img src="/ply1.png" alt="PLY 스캔 데이터 최적화" class="studio__feature-img" loading="lazy" />
+            <div class="ply-overlay">
+              <div class="ply-overlay__badge">
+                <span class="ply-overlay__icon">⚡</span>
+                <span data-i18n="studio.ply.badge">Omniverse · AI Ready</span>
+              </div>
+            </div>
+          </div>
           <div class="studio__feature-content">
             <span class="studio__feature-tag studio__feature-tag--orange" data-i18n="studio.feature.ply.tag">SCAN DATA
               GATEWAY</span>
@@ -506,15 +576,6 @@
                   <span class="ply-gauge__stat-label">Optimized</span>
                   <span class="ply-gauge__stat-value ply-gauge__stat-value--glow">~3 GB</span>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="studio__feature-visual studio__feature-visual--ply">
-            <img src="/ply1.png" alt="PLY 스캔 데이터 최적화" class="studio__feature-img" loading="lazy" />
-            <div class="ply-overlay">
-              <div class="ply-overlay__badge">
-                <span class="ply-overlay__icon">⚡</span>
-                <span data-i18n="studio.ply.badge">Omniverse · AI Ready</span>
               </div>
             </div>
           </div>
@@ -1049,32 +1110,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       AUTOTWIN LITE — 경량 제품 소개 배너 (푸터 직전으로 이동)
-       ═══════════════════════════════════════════════════════════ -->
-  <section class="section autotwin-banner">
-    <div class="container">
-      <div class="autotwin-banner__inner" data-reveal>
-        <div class="autotwin-banner__icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-        <div class="autotwin-banner__content">
-          <h3 class="autotwin-banner__title" data-i18n="autotwin.banner.title">효율적 비용으로 빠르게 3D 최적화만 필요하다면?</h3>
-          <p class="autotwin-banner__desc" data-i18n="autotwin.banner.desc">SaaS 기반 경량화 전문 서비스 — 더 편하게, 더 합리적으로.</p>
-        </div>
-        <a href="https://www.pmautotwin.com/" target="_blank" rel="noopener noreferrer"
-          class="hero__cta hero__cta--primary" style="white-space:nowrap;font-size:1rem;padding:0.85rem 2rem;">
-          <span data-i18n="autotwin.banner.cta">오토트윈 무료로 시작하기</span>
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-            <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -1091,8 +1126,8 @@
           <p class="footer__tagline" data-i18n="footer.tagline">Automated 3D Optimization for the Future.</p>
           <div class="footer__contact-info">
             <p>Email: <a href="mailto:contact@pmautotwin.com">contact@pmautotwin.com</a></p>
-            <p>Tel: 02-2088-1855</p>
-            <p>Address: 서울특별시 영등포구 문래동6가 33 에이스엔에스타워 1216호</p>
+            <p data-i18n="footer.tel">Tel: 02-2088-1855</p>
+            <p data-i18n="footer.address">Address: 서울특별시 영등포구 문래동6가 33 에이스엔에스타워 1216호</p>
           </div>
         </div>
 

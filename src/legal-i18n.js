@@ -28,6 +28,18 @@ export function setLang(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+
+    // Update Back to Main link according to language routing
+    const backBtn = document.querySelector('.legal-header__back');
+    if (backBtn) {
+        if (lang === 'en') {
+            backBtn.href = '/en';
+        } else if (lang === 'ja') {
+            backBtn.href = '/jp';
+        } else {
+            backBtn.href = '/';
+        }
+    }
 }
 
 export function initLegalI18n() {
