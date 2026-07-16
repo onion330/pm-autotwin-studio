@@ -865,7 +865,13 @@ function initVideoShowcase() {
   if (!thumb || !embed) return;
 
   function getVideoId() {
-    return getLang() === 'ko' ? 'pC7eHKDvC78' : 'WKhcYuFlre4';
+    // 영문/일문용 전용 비디오 ID(WKhcYuFlre4)가 유효하지 않으므로, 준비될 때까지 통합 시연 영상(pC7eHKDvC78)을 공용 제공합니다.
+    const videoIds = {
+      ko: 'pC7eHKDvC78',
+      en: 'pC7eHKDvC78',
+      ja: 'pC7eHKDvC78'
+    };
+    return videoIds[getLang()] || 'pC7eHKDvC78';
   }
 
   function getEmbedUrl(autoplay = true) {
