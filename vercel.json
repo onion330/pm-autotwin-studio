@@ -9,6 +9,18 @@
       "destination": "/terms.html"
     },
     {
+      "source": "/PM_AutoTwin_Studio_User_Guide",
+      "destination": "/PM_AutoTwin_Studio_User_Guide.html"
+    },
+    {
+      "source": "/guide",
+      "destination": "/PM_AutoTwin_Studio_User_Guide.html"
+    },
+    {
+      "source": "/guide-kr",
+      "destination": "/PM_AutoTwin_Studio_사용가이드.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
