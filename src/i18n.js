@@ -9,6 +9,7 @@ const translations = {
     'nav.precision': '정밀도',
     'nav.usability': '사용성',
     'nav.trust': '신뢰',
+    'nav.evidence': '검증 기록',
     'nav.company': '포켓메모리',
     'nav.demo': '무료 사용하기',
     // HERO
@@ -207,6 +208,7 @@ const translations = {
     'nav.precision': 'Precision',
     'nav.usability': 'Usability',
     'nav.trust': 'Trust',
+    'nav.evidence': 'Verification',
     'nav.company': 'Pocket Memory',
     'nav.demo': 'Try Free',
     // HERO
@@ -405,6 +407,7 @@ const translations = {
     'nav.precision': '精度',
     'nav.usability': '使いやすさ',
     'nav.trust': '信頼',
+    'nav.evidence': '検証記録',
     'nav.company': 'ポケットメモリー',
     'nav.demo': '無料で使う',
     // HERO

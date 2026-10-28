@@ -14,6 +14,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { initI18n, getLang } from './i18n.js';
+import './proof.js';
 
 const isMobile = window.innerWidth < 768;
 const PARTICLE_COUNT = isMobile ? 12000 : 24000;

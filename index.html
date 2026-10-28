@@ -140,6 +140,7 @@
         <li><a href="#precision" data-i18n="nav.precision">정밀도</a></li>
         <li><a href="#zero" data-i18n="nav.usability">사용성</a></li>
         <li><a href="#trust" data-i18n="nav.trust">신뢰</a></li>
+        <li><a href="#evidence" data-i18n="nav.evidence">검증 기록</a></li>
         <li><a href="https://www.pocketmemory.co.kr/" target="_blank" rel="noopener noreferrer"
             data-i18n="nav.company">포켓메모리</a></li>
         <li><a href="https://studio-workspace.pmautotwin.com/" target="_blank" rel="noopener noreferrer"
@@ -916,56 +917,9 @@
         </div>
       </div>
 
-      <!-- Results with animated KPI cards -->
+      <!-- 장관상 (옛 KPI 숫자 카드는 2026-10-28 검증 기록으로 대체) -->
       <div class="trust__results" data-reveal>
-        <h3 class="trust__results-title" data-i18n="trust.results.title" data-i18n-html>기술은 <em>숫자</em>로 증명됩니다</h3>
-        <div class="trust__results-grid">
-          <div class="trust__result-card" data-reveal>
-            <span class="trust__result-logo">HYUNDAI</span>
-            <h4 data-i18n="trust.result1.company">현대자동차 HMGICS</h4>
-            <p data-i18n="trust.result1.desc">물류 디지털 트윈</p>
-            <div class="trust__kpi-row">
-              <div class="trust__kpi-ring" data-percent="82">
-                <svg viewBox="0 0 100 100">
-                  <circle class="trust__kpi-bg" cx="50" cy="50" r="42" />
-                  <circle class="trust__kpi-circle" cx="50" cy="50" r="42" />
-                </svg>
-                <span class="trust__kpi-val"><span data-count="82">0</span>%</span>
-                <span class="trust__kpi-label" data-i18n="trust.result1.kpi1">경량화</span>
-              </div>
-              <div class="trust__kpi-ring" data-percent="86">
-                <svg viewBox="0 0 100 100">
-                  <circle class="trust__kpi-bg" cx="50" cy="50" r="42" />
-                  <circle class="trust__kpi-circle" cx="50" cy="50" r="42" />
-                </svg>
-                <span class="trust__kpi-val"><span data-count="86">0</span>%</span>
-                <span class="trust__kpi-label" data-i18n="trust.result1.kpi2">렌더링↑</span>
-              </div>
-            </div>
-          </div>
-          <div class="trust__result-card" data-reveal>
-            <span class="trust__result-logo">SK ecoplant</span>
-            <h4 data-i18n="trust.result2.company">SK에코플랜트</h4>
-            <p data-i18n="trust.result2.desc">배터리 하우징 초경량화</p>
-            <div class="trust__kpi-row">
-              <div class="trust__kpi-ring" data-percent="80">
-                <svg viewBox="0 0 100 100">
-                  <circle class="trust__kpi-bg" cx="50" cy="50" r="42" />
-                  <circle class="trust__kpi-circle" cx="50" cy="50" r="42" />
-                </svg>
-                <span class="trust__kpi-val"><span data-count="80">0</span>%</span>
-                <span class="trust__kpi-label" data-i18n="trust.result2.kpi1">경량화</span>
-              </div>
-              <div class="trust__kpi-ring" data-percent="20" data-max="60">
-                <svg viewBox="0 0 100 100">
-                  <circle class="trust__kpi-bg" cx="50" cy="50" r="42" />
-                  <circle class="trust__kpi-circle" cx="50" cy="50" r="42" />
-                </svg>
-                <span class="trust__kpi-val"><span data-count="20">0</span>초</span>
-                <span class="trust__kpi-label" data-i18n="trust.result2.kpi2">처리시간</span>
-              </div>
-            </div>
-          </div>
+        <div class="trust__results-grid trust__results-grid--single">
           <div class="trust__result-card trust__result-card--award" data-reveal>
             <div class="trust__award-medal" id="awardMedal">🏆</div>
             <h4 data-i18n="trust.result3.year">2025 과학기술정보통신부</h4>
@@ -973,13 +927,16 @@
             <span class="trust__award-tag" data-i18n="trust.result3.tag">MINISTER'S AWARD FOR SCIENCE & ICT</span>
           </div>
         </div>
-        <p class="trust__results-disclaimer" data-i18n="trust.results.disclaimer">※ 본 성과는 해당 기업과의 프로젝트 수행 과정에서 포켓메모리의
-          기술력을 적용하고 실무적으로 검증한 사례를 바탕으로 구성되었습니다.</p>
       </div>
     </div>
   </section>
 
 
+
+  <!-- 검증 기록 · 산업별 입구 · 자주 묻는 질문 (src/proof.js가 채움) -->
+  <section id="evidence" class="section pf pf-evidence" aria-labelledby="evidence-title"></section>
+  <section id="industries" class="section pf pf-industries"></section>
+  <section id="faq" class="section pf pf-faq"></section>
 
   <!-- AutoTwin 소개 팝업 모달 -->
   <div class="autotwin-popup" id="autotwinPopup">
