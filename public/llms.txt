@@ -1,6 +1,6 @@
 # PM AutoTwin Studio
 
-> PM AutoTwin Studio is an enterprise 3D asset management OS developed by POCKET MEMORY Inc., a South Korean deep-tech company specializing in 3D digital twin optimization.
+> PM AutoTwin Studio is a 3D asset platform that optimizes heavy CAD and large IFC files and converts them to OpenUSD (Beta) for simulation and digital twins, developed by POCKET MEMORY Inc., a South Korean deep-tech company specializing in 3D digital twin optimization.
 
 ## Company
 - **Name**: POCKET MEMORY Inc. (주식회사 포켓메모리)

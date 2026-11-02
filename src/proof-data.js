@@ -25,9 +25,9 @@ export const EVIDENCE = [
             ja: '名前 267/267、インスタンス 52/52、マテリアル割り当て 156/156、カスタム属性 364/364 が原本と一致',
         },
         cond: {
-            ko: '1모델, 사내 1차 검증, 제품 배포 전',
-            en: 'One model, first internal check, before product release',
-            ja: '1モデル、社内一次検証、製品リリース前',
+            ko: '모델 1개, 사내 시험',
+            en: 'One model, internal test',
+            ja: '1モデル、社内テスト',
         },
         links: {
             post: { ko: 'https://www.linkedin.com/feed/update/urn:li:activity:7515667661285134337/', en: 'https://lnkd.in/p/gMfFrtir' },

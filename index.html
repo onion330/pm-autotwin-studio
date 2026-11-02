@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PM AutoTwin Studio — 무거운 3D 데이터, 클릭 한 번으로 가벼운 '자산'이 됩니다.</title>
+  <title>PM AutoTwin Studio — 이미 가진 설계 데이터를, 시뮬레이션용으로.</title>
   <meta name="description"
-    content="PM AutoTwin Studio는 독자적 GNN 알고리즘과 IEEE 표준이 결합된 글로벌 3D 자산 관리 OS입니다. 98% 폴리곤 최적화, 82% 원형 보존, 15초 처리." />
+    content="무거운 CAD·대용량 IFC를 최적화하고 OpenUSD(Beta)로 바꿔 시뮬레이션과 디지털트윈에 쓸 수 있게 준비합니다." />
   <meta name="keywords"
     content="PM AutoTwin, 3D 최적화, 디지털 트윈, GNN, IEEE, 3D 자산 관리, POCKET MEMORY, 포켓메모리, digital twin, 3D optimization, mesh optimization" />
   <meta name="author" content="POCKET MEMORY Inc." />
@@ -25,8 +25,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PM AutoTwin Studio" />
-  <meta property="og:title" content="PM AutoTwin Studio — 3D 자산 관리 OS" />
-  <meta property="og:description" content="독자적 GNN 알고리즘과 IEEE 표준이 결합된 글로벌 3D 자산 관리 OS. 98% 폴리곤 최적화, 82% 원형 보존." />
+  <meta property="og:title" content="PM AutoTwin Studio — 이미 가진 설계 데이터를, 시뮬레이션용으로." />
+  <meta property="og:description" content="무거운 CAD·대용량 IFC를 최적화하고 OpenUSD(Beta)로 바꿔 시뮬레이션과 디지털트윈에 쓸 수 있게 준비합니다." />
   <meta property="og:url" content="https://studio.pmautotwin.com/" />
   <meta property="og:image" content="https://studio.pmautotwin.com/pmas.png" />
   <meta property="og:image:width" content="1200" />
@@ -37,9 +37,9 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="PM AutoTwin Studio — 3D Asset Management OS" />
+  <meta name="twitter:title" content="PM AutoTwin Studio — Your real CAD, prepped for simulation." />
   <meta name="twitter:description"
-    content="Enterprise 3D optimization with proprietary GNN algorithm and IEEE standards. 98% polygon reduction, 82% shape preservation." />
+    content="Optimize heavy CAD and large IFC files and convert them to OpenUSD (Beta) for simulation and digital twins." />
   <meta name="twitter:image" content="https://studio.pmautotwin.com/pmas.png" />
 
   <!-- Favicon -->
@@ -53,7 +53,7 @@
       {
         "@type": "SoftwareApplication",
         "name": "PM AutoTwin Studio",
-        "description": "Enterprise 3D asset management OS powered by proprietary GNN algorithm and IEEE standards. Achieves 98% polygon optimization with 82% original shape preservation in under 15 seconds.",
+        "description": "Optimize heavy CAD and large IFC files and convert them to OpenUSD (Beta) for simulation and digital twins.",
         "url": "https://studio.pmautotwin.com",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web, SaaS, On-Premise, API",
@@ -213,56 +213,9 @@
         <span class="hero__badge-dot"></span>
         <span data-i18n="hero.badge">⚡ PHYSICAL AI 국가전략 시대</span>
       </div>
-      <h1 class="hero__title">
-        <span class="hero__title-large" data-i18n="hero.title.1" data-i18n-html>Physical AI 시대,</span>
-        <span class="hero__title-line" data-i18n="hero.title.2" data-i18n-html>시뮬레이션이 중요합니다.</span>
-        <span class="hero__title-line" data-i18n="hero.title.3" data-i18n-html>그 시뮬레이션 시간의 73%가,</span>
-        <span class="hero__title-line" data-i18n="hero.title.4" data-i18n-html>3D 데이터 준비(전처리)에 소모됩니다.<sup>*</sup></span>
-      </h1>
-      <p class="hero__subtitle hero__subtitle--main"
-        style="font-size:1.5rem;font-weight:700;margin-top:0.5rem;color:var(--cyan)" data-i18n="hero.subtitle.tagline">
-        원형을 지키면서, 가장 쉽게 가벼워지는 방법.</p>
-      <p class="hero__title-brand" style="font-size:2.2rem;font-weight:900;margin:0.5rem 0;">PM AutoTwin Studio</p>
-      <p class="hero__subtitle" data-i18n="hero.subtitle" data-i18n-html>
-        무거운 CAD 파일, 1분 만에 가벼운 ‘자산’이 됩니다.
-      </p>
-      <p class="hero__footnote" style="font-size:0.8rem;opacity:0.6;margin-top:0.5rem;" data-i18n="hero.footnote">
-        *Sandia National Labs 연구 기준 / 경량 샘플 파일 기준 최대 처리 속도</p>
-
-      <!-- Live transform metrics -->
-      <div class="hero__metrics" id="heroMetrics">
-        <div class="hero__metric">
-          <span class="hero__metric-icon">📐</span>
-          <div class="hero__metric-data">
-            <span class="hero__metric-label">Polygons</span>
-            <span class="hero__metric-before">2,700,000</span>
-            <span class="hero__metric-arrow">→</span>
-            <span class="hero__metric-after" id="metricPoly">400,000</span>
-          </div>
-          <div class="hero__metric-bar">
-            <div class="hero__metric-fill" data-width="85"></div>
-          </div>
-        </div>
-        <div class="hero__metric">
-          <span class="hero__metric-icon">💾</span>
-          <div class="hero__metric-data">
-            <span class="hero__metric-label">File Size</span>
-            <span class="hero__metric-before">1 GB</span>
-            <span class="hero__metric-arrow">→</span>
-            <span class="hero__metric-after">50 MB</span>
-          </div>
-          <div class="hero__metric-bar">
-            <div class="hero__metric-fill" data-width="95"></div>
-          </div>
-        </div>
-        <div class="hero__metric hero__metric--highlight">
-          <span class="hero__metric-icon">⚡</span>
-          <div class="hero__metric-data">
-            <span class="hero__metric-label">Render Speed</span>
-            <span class="hero__metric-boost">+86%</span>
-          </div>
-        </div>
-      </div>
+      <h1 class="hero__title hero__title--one" data-i18n="hero.title" data-i18n-html>이미 가진 설계 데이터를, 시뮬레이션용으로.</h1>
+      <p class="hero__lead" data-i18n="hero.lead" data-i18n-html>손으로 줄이던 무거운 CAD·대용량 IFC를 최적화하고 OpenUSD(Beta)로 바꿉니다.</p>
+      <p class="hero__why" data-i18n="hero.why">요청하시면 이름·속성이 원본과 맞는지 리포트로 보여 드립니다.</p>
 
       <div class="hero__cta-group">
         <a href="https://studio-workspace.pmautotwin.com/" target="_blank" rel="noopener noreferrer"
@@ -273,9 +226,26 @@
               stroke-linejoin="round" />
           </svg>
         </a>
-        <a href="mailto:webmaster@pocketmemory.co.kr" class="hero__cta hero__cta--ghost"
-          data-i18n="hero.cta.ghost">엔터프라이즈
-          도입 문의</a>
+        <a href="#evidence" class="hero__cta hero__cta--ghost" data-i18n="hero.cta.ghost">샘플 결과 보기</a>
+      </div>
+
+      <!-- 첫 화면 영수증: 공개 영상 + 원본 대조 -->
+      <div class="hero__receipt">
+        <a class="hero__receipt-video" id="heroVideo" href="https://youtu.be/Bm1Z9AahjfY" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.youtube.com/vi/Bm1Z9AahjfY/hqdefault.jpg" alt="" width="320" height="180" />
+          <span class="hero__receipt-play" aria-hidden="true"></span>
+          <span class="hero__receipt-vlabel" data-i18n="hero.proof.video">영상으로 보기</span>
+        </a>
+        <div class="hero__receipt-body">
+          <div class="hero__receipt-tag" data-i18n="hero.proof.tag">공개한 검증 기록</div>
+          <div class="hero__receipt-title" data-i18n="hero.proof.title">Revit 공조기(AHU) IFC → OpenUSD (Beta)</div>
+          <dl class="hero__receipt-rows">
+            <div><dt data-i18n="hero.proof.k1">정점</dt><dd data-i18n="hero.proof.v1">128만 → 84,427</dd></div>
+            <div><dt data-i18n="hero.proof.k2">용량</dt><dd>42.9 MB → 6.52 MB</dd></div>
+            <div><dt data-i18n="hero.proof.k3">남은 것</dt><dd data-i18n="hero.proof.v3">전압 208V, 체적 42.59027㎥ 등 속성값이 원본과 일치</dd></div>
+          </dl>
+          <div class="hero__receipt-cond" data-i18n="hero.proof.cond">1파일, IFC → OpenUSD 한 방향</div>
+        </div>
       </div>
 
       <div class="hero__scroll-hint">
@@ -301,7 +271,7 @@
           <span class="studio__badge-name" data-i18n="studio.badge.name">AutoTwin Studio</span>
         </div>
         <h2 class="section__title studio__title" data-i18n="studio.title" data-i18n-html>
-          최적화를 넘어,<br />3D 자산 관리 OS로.<br /><em>'PM 오토트윈 스튜디오'</em>의 탄생
+          최적화를 넘어,<br />3D 자산을 쌓는 곳으로.<br /><em>'PM 오토트윈 스튜디오'</em>의 탄생
         </h2>
         <p class="section__desc studio__desc" data-i18n="studio.desc" data-i18n-html>
           단순히 용량을 줄여주던 오토트윈이 압도적인 진화를 마쳤습니다.<br />
@@ -993,6 +963,16 @@
   <!-- ═══════════════════════════════════════════════════════════
        CTA — 최종 전환
        ═══════════════════════════════════════════════════════════ -->
+  <!-- 미래 칸 -->
+  <section id="future" class="section future">
+    <div class="future__inner" data-reveal>
+      <div class="future__tag" data-i18n="future.tag">앞으로</div>
+      <h2 class="future__title" data-i18n="future.title" data-i18n-html>공개 자산은 많아졌습니다.<br />우리 현장을 닮은 시뮬레이션은<br />우리 설계 데이터에서 시작합니다.</h2>
+      <p class="future__desc" data-i18n="future.desc">피지컬 AI와 디지털트윈에서 어려운 일은 시뮬레이션할 세상을 만드는 것입니다. PM AutoTwin Studio는 이미 가진 설계 데이터를 시뮬레이션에 쓸 수 있게 준비하고, 무엇이 남았는지 원본과 맞춰 봅니다.</p>
+      <a class="future__link" href="#evidence" data-i18n="future.link">공개한 검증 기록 보기</a>
+    </div>
+  </section>
+
   <section id="cta" class="section cta">
     <div class="cta__glow-orb"></div>
     <div class="container">
