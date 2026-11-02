@@ -1,6 +1,22 @@
 {
   "rewrites": [
     {
+      "source": "/manual",
+      "destination": "/manual/index.html"
+    },
+    {
+      "source": "/manual/ko",
+      "destination": "/manual/ko.html"
+    },
+    {
+      "source": "/manual/en",
+      "destination": "/manual/en.html"
+    },
+    {
+      "source": "/manual/ja",
+      "destination": "/manual/ja.html"
+    },
+    {
       "source": "/privacy",
       "destination": "/privacy.html"
     },
@@ -26,6 +42,19 @@
     }
   ],
   "headers": [
+    {
+      "source": "/manual(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
     {
       "source": "/assets/(.*)",
       "headers": [
