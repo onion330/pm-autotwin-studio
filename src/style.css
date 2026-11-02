@@ -4339,3 +4339,6 @@ ol {
 .hero__cta--ghost { color: #fff; border-color: rgba(255, 255, 255, 0.45); background: rgba(8, 11, 24, 0.7); }
 .future { position: relative; z-index: 5; }
 #evidence, #industries, #faq { position: relative; z-index: 2; background: #050817; }
+
+/* 기준표 밖 샘플 숫자는 첫 화면 연출에서 숨김 (rd-reviewer 2026-11-02) */
+.hero__scan-info, .hero__scan-badge { display: none !important; }
