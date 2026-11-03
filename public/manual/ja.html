@@ -351,7 +351,7 @@ footer{
         <li><span><span class="lbl">ファイルの追加</span> — キューの右上の <span class="ui">+</span> ボタンで追加します。FBX、OBJ、STL、GLB、PLY、STP/STEP、IGS/IGES、IFC(Beta)、USD(Beta)に対応しています。</span></li>
         <li><span><span class="lbl">一括設定</span> — 最適化の目標、目標削減率のスライダー、プリセットを、キュー内のすべてのアセットに同じように適用します。プリセットは Plant Std（工場設備向け）、Mobile（モバイル向け）、Balanced（バランス）です。</span></li>
         <li><span><span class="lbl">最小頂点数（Min Vertex Count）</span> — 小さな部品に手を加えないように基準を決める値です。</span></li>
-        <li><span><span class="lbl">Start All</span> — キュー内のアセットを一度に実行します。問題のあるファイルがあってもスキップして処理を続けるようになっています。</span></li>
+        <li><span><span class="lbl">Start All</span> — キュー内のアセットを一度に実行します。処理中に失敗したファイルはスキップし、残りの処理を続けます。</span></li>
         <li><span><span class="lbl">Job History</span> — 完了件数と目標比率が画面右側に表示されます。</span></li>
       </ul>
     </section>
@@ -381,7 +381,7 @@ footer{
       <h3>一緒に作業する</h3>
       <ul class="steps">
         <li><span><span class="lbl">Comments</span> — アセットに意見を残し、返信でやり取りします。3Dの上に注釈を表示し、位置とともに意見を共有する機能があります。</span></li>
-        <li><span><span class="lbl">Generate Secure Link</span> — セキュアリンクを作成して共有する機能です。</span></li>
+        <li><span><span class="lbl">Generate Secure Link</span> — セキュアリンクを作成して共有します。リンクの有効期限を設定できます。受け取る相手（機関・人）を指定する機能はありません。</span></li>
         <li><span><span class="lbl">Invite Members</span> — プロジェクトに同僚を招待します。</span></li>
       </ul>
       <h3>情報を付ける</h3>
@@ -389,7 +389,7 @@ footer{
       <div class="shot-cap">バージョン選択、タグ、属性（英語画面） · 3D model: AmazingHand by Pollen Robotics (CC BY 4.0)</div>
       <ul class="steps">
         <li><span><span class="lbl">Attributes</span> — アセットに文字・表・画像の情報を付けます。</span></li>
-        <li><span><span class="lbl">ERP/MES Data</span> — 外部システムの情報を付けて確認できる欄があります。</span></li>
+        <li><span><span class="lbl">ERP/MES Data</span> — 新しいアセットにはサンプル値が自動で入ります。現在は外部システム（ERP・MES）とは連携していません。</span></li>
       </ul>
     </section>
 
@@ -407,7 +407,7 @@ footer{
         <li><span><span class="lbl">測定（Measure）</span> — 面・エッジ・中心・頂点を選んで測定する機能です。</span></li>
         <li><span><span class="lbl">表示</span> — Shaded、Wireframe、Blend と線の色、カメラを切り替えます。</span></li>
         <li><span><span class="lbl">Hierarchy · Inspector</span> — 選択したオブジェクトの位置・回転・サイズの値と属性を確認し、ユーザー属性を追加します。</span></li>
-        <li><span><span class="lbl">Data</span> — Excelに書き出し、読み込む機能です。</span></li>
+        <li><span><span class="lbl">Data</span> — Excelに書き出し、読み込みます。<br><b>Excel Export</b>：シート3枚 — Hierarchy（ノードツリー）、Custom Data（ノードごとのユーザー属性）、Material（ノードごとの色RGB。Viewerで指定して保存したノードのみで、テクスチャなど他のマテリアル情報は含まれません）。<br><b>Excel Import</b>：Node IDを基準に、ノード名・ユーザー属性・色を変更したり、新しい属性・色を追加したりできます。ツリー構造の変更、ノードの追加・削除はできません。Excelで行を削除しても既存の値は削除されません。変更内容はViewer画面にのみ反映されます。</span></li>
         <li><span><span class="lbl">操作</span> — 右クリックで見回し、WASDで移動し、ホイールで拡大し、Zでリセットします。画面の左下に案内が表示されます。</span></li>
       </ul>
     </section>

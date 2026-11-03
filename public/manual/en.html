@@ -351,7 +351,7 @@ footer{
         <li><span><span class="lbl">Adding files</span> — Add files with the <span class="ui">+</span> button at the top right of the queue. FBX, OBJ, STL, GLB, PLY, STP/STEP, IGS/IGES, IFC(Beta), and USD(Beta) are supported.</span></li>
         <li><span><span class="lbl">Batch settings</span> — Applies Optimization Goal, the Target Reduction slider, and a preset equally to every asset in the queue. The presets are Plant Std (for plant equipment), Mobile (for mobile), and Balanced (for balance).</span></li>
         <li><span><span class="lbl">Min Vertex Count</span> — A threshold that keeps small parts from being touched.</span></li>
-        <li><span><span class="lbl">Start All</span> — Runs the assets in the queue all at once. It is designed to skip a file with a problem and keep going.</span></li>
+        <li><span><span class="lbl">Start All</span> — Runs the assets in the queue all at once. If a file fails during processing, it is skipped and the rest continue.</span></li>
         <li><span><span class="lbl">Job History</span> — The number of completed jobs and the target ratio are shown on the right side of the screen.</span></li>
       </ul>
     </section>
@@ -381,7 +381,7 @@ footer{
       <h3>Working together</h3>
       <ul class="steps">
         <li><span><span class="lbl">Comments</span> — Leave comments on an asset and discuss them through replies. There is a feature for placing annotations on the 3D model to share comments along with their location.</span></li>
-        <li><span><span class="lbl">Generate Secure Link</span> — A feature for creating and sharing a secure link.</span></li>
+        <li><span><span class="lbl">Generate Secure Link</span> — Creates a secure link to share. You can set how long the link stays valid. You cannot specify who (an organization or a person) receives it.</span></li>
         <li><span><span class="lbl">Invite Members</span> — Invite colleagues to a project.</span></li>
       </ul>
       <h3>Adding information</h3>
@@ -389,7 +389,7 @@ footer{
       <div class="shot-cap">Version selector, tags, and attributes · 3D model: AmazingHand by Pollen Robotics (CC BY 4.0)</div>
       <ul class="steps">
         <li><span><span class="lbl">Attributes</span> — Attach text, table, and image information to an asset.</span></li>
-        <li><span><span class="lbl">ERP/MES Data</span> — A field where you can attach and view information from external systems.</span></li>
+        <li><span><span class="lbl">ERP/MES Data</span> — New assets are filled with sample values automatically. It is not connected to external systems (ERP, MES) at this time.</span></li>
       </ul>
     </section>
 
@@ -407,7 +407,7 @@ footer{
         <li><span><span class="lbl">Measure</span> — A measurement feature for selecting faces, edges, centers, and vertices.</span></li>
         <li><span><span class="lbl">View</span> — Change between Shaded, Wireframe, and Blend, and change the line color and camera.</span></li>
         <li><span><span class="lbl">Hierarchy · Inspector</span> — Check the position, rotation, scale, and properties of the selected object, and add custom properties.</span></li>
-        <li><span><span class="lbl">Data</span> — A feature for exporting to and importing from Excel.</span></li>
+        <li><span><span class="lbl">Data</span> — Exports to and imports from Excel.<br><b>Excel Export</b>: three sheets — Hierarchy (node tree), Custom Data (user properties per node), Material (RGB color per node; only nodes whose color was set and saved in the Viewer, and other material information such as textures is not included).<br><b>Excel Import</b>: Using the Node ID, you can change node names, user properties and colors, or add new properties and colors. You cannot change the tree structure or add or delete nodes. Deleting a row in Excel does not delete the existing values. Changes are applied only to the Viewer screen.</span></li>
         <li><span><span class="lbl">Controls</span> — Right-click to look around, move with WASD, zoom with the wheel, and reset with Z. A guide is shown at the bottom left of the screen.</span></li>
       </ul>
     </section>

@@ -351,7 +351,7 @@ footer{
         <li><span><span class="lbl">파일 추가</span> — 대기열 오른쪽 위 <span class="ui">+</span> 버튼으로 추가합니다. FBX, OBJ, STL, GLB, PLY, STP/STEP, IGS/IGES, IFC(Beta), USD(Beta)를 지원합니다.</span></li>
         <li><span><span class="lbl">일괄 설정</span> — 최적화 목표, 목표 감소율 슬라이더, 프리셋을 대기열의 모든 에셋에 같게 적용합니다. 프리셋은 Plant Std(공장 설비용), Mobile(모바일용), Balanced(균형)입니다.</span></li>
         <li><span><span class="lbl">최소 정점 수(Min Vertex Count)</span> — 작은 부품을 건드리지 않도록 기준을 정하는 값입니다.</span></li>
-        <li><span><span class="lbl">Start All</span> — 대기열의 에셋을 한 번에 실행합니다. 문제가 있는 파일이 있어도 건너뛰고 계속 진행하도록 되어 있습니다.</span></li>
+        <li><span><span class="lbl">Start All</span> — 대기열의 에셋을 한 번에 실행합니다. 처리 중 실패한 파일은 건너뛰고 나머지를 계속 처리합니다.</span></li>
         <li><span><span class="lbl">Job History</span> — 완료 건수와 목표 비율이 화면 오른쪽에 표시됩니다.</span></li>
       </ul>
     </section>
@@ -381,7 +381,7 @@ footer{
       <h3>함께 일하기</h3>
       <ul class="steps">
         <li><span><span class="lbl">Comments</span> — 에셋에 의견을 남기고 답글로 대화합니다. 3D 위에 주석을 표시해 위치와 함께 의견을 공유하는 기능이 있습니다.</span></li>
-        <li><span><span class="lbl">Generate Secure Link</span> — 보안 링크를 만들어 공유하는 기능입니다.</span></li>
+        <li><span><span class="lbl">Generate Secure Link</span> — 보안 링크를 만들어 공유합니다. 링크의 만료 기간을 정할 수 있습니다. 받는 사람(기관·사람)을 지정하는 기능은 없습니다.</span></li>
         <li><span><span class="lbl">Invite Members</span> — 프로젝트에 동료를 초대합니다.</span></li>
       </ul>
       <h3>정보 붙이기</h3>
@@ -389,7 +389,7 @@ footer{
       <div class="shot-cap">버전 선택, 태그, 속성 (영문 화면) · 3D model: AmazingHand by Pollen Robotics (CC BY 4.0)</div>
       <ul class="steps">
         <li><span><span class="lbl">Attributes</span> — 에셋에 문자·표·이미지 정보를 붙입니다.</span></li>
-        <li><span><span class="lbl">ERP/MES Data</span> — 외부 시스템 정보를 붙여 볼 수 있는 칸이 있습니다.</span></li>
+        <li><span><span class="lbl">ERP/MES Data</span> — 새 에셋에는 예시 값이 자동으로 들어갑니다. 지금은 외부 시스템(ERP·MES)과 연결되지 않습니다.</span></li>
       </ul>
     </section>
 
@@ -407,7 +407,7 @@ footer{
         <li><span><span class="lbl">측정(Measure)</span> — 면·모서리·중심·정점을 고르는 측정 기능입니다.</span></li>
         <li><span><span class="lbl">보기</span> — Shaded, Wireframe, Blend와 선 색, 카메라를 바꿉니다.</span></li>
         <li><span><span class="lbl">Hierarchy · Inspector</span> — 선택한 물체의 위치·회전·크기 값과 속성을 확인하고, 사용자 속성을 추가합니다.</span></li>
-        <li><span><span class="lbl">Data</span> — 엑셀로 내보내고 가져오는 기능입니다.</span></li>
+        <li><span><span class="lbl">Data</span> — 엑셀로 내보내고 가져옵니다.<br><b>Excel Export</b>: 시트 3장 — Hierarchy(노드 트리), Custom Data(노드별 사용자 속성), Material(노드별 색상 RGB. Viewer에서 지정해 저장한 노드만 들어가고, 텍스처 등 다른 재질 정보는 빠집니다).<br><b>Excel Import</b>: Node ID 기준으로 노드 이름·사용자 속성·색상을 바꾸거나 새 속성·색상을 더할 수 있습니다. 트리 구조 변경, 노드 추가·삭제는 안 됩니다. Excel에서 행을 지워도 기존 값은 지워지지 않습니다. 바꾼 내용은 Viewer 화면에만 반영됩니다.</span></li>
         <li><span><span class="lbl">조작</span> — 오른쪽 클릭으로 둘러보고, WASD로 이동하며, 휠로 확대하고, Z로 초기화합니다. 화면 왼쪽 아래에 안내가 표시됩니다.</span></li>
       </ul>
     </section>
