@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PM AutoTwin Studio Guide</title>
+<script>
+(function () {
+  var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+  var first = String(langs[0]).toLowerCase();
+  var target = first.indexOf('ko') === 0 ? 'ko' : first.indexOf('ja') === 0 ? 'ja' : 'en';
+  location.replace('/manual/' + target + location.search);
+})();
+</script>
+</head><body style="font-family:sans-serif;background:#1B2130;color:#fff;padding:32px">
+<p><a style="color:#fff" href="/manual/ko">한국어</a> · <a style="color:#fff" href="/manual/en">English</a> · <a style="color:#fff" href="/manual/ja">日本語</a></p>
+</body></html>
