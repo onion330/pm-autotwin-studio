@@ -9,40 +9,34 @@
 - **Location**: Seoul, South Korea
 
 ## Product: PM AutoTwin Studio
-PM AutoTwin Studio is a comprehensive 3D pipeline platform consisting of three modules:
+PM AutoTwin Studio connects three steps in one place:
 
 ### PM Create (GEN)
-- Generates instant 3D models from a single image input
+- Generates 3D models from an image input
 - Supports rapid prototyping and digital twin creation
 
 ### PM Optimize (OPT)
-- Proprietary GNN (Graph Neural Network) algorithm for 3D mesh optimization
-- Achieves 98% polygon reduction while maintaining 82% original shape preservation
-- Processing time under 15 seconds for complex industrial models
-- Used by Hyundai Motor HMGICS for robot arm digitization (82% reduction, 86% preservation)
-- Used by SK ecoplant for battery housing ultra-optimization (98% reduction, 15s processing)
+- Opens large design files without splitting them and optimizes the meshes inside
+- Keeps hierarchy, names, materials and other metadata where possible
+- Converts CAD to OpenUSD (Beta) for simulation pre-processing
+- Shows the original and the result side by side for comparison
 
 ### PM Hub (HUB)
-- 3D asset lifecycle management and distribution platform
-- Connects with enterprise ERP/MES systems
-- Supports SaaS, On-Premise, and API deployment modes
+- 3D asset management: search, reuse and share optimized files with your team
+- Secure links with an expiry period
 
-## Key Technologies
-- **GNN Algorithm**: Proprietary Graph Neural Network for 3D mesh optimization
-- **PM OmniMetric**: Multi-dimensional quality measurement engine for 3D data
-- **IEEE Standards**: Active contributor to IEEE P3079.5 (3D Quality Measurement) and P3079.6 (3D Optimization)
-- **Official Reference Software**: Designated as IEEE P3079.6 Official Reference Software
+## Standards
+- IEEE P3079.5/6 (3D quality measurement and optimization): PAR submission in preparation
 
-## Achievements & Awards
-- IEEE P3079.5 & P3079.6 Vice-Chair company
-- 2025 Minister's Award from Korea Ministry of Science & ICT
-- Hyundai Motor HMGICS collaboration: 82% reduction rate, 86% shape preservation
-- SK ecoplant collaboration: 98% optimization, 15-second processing
+## Awards
+- 2025 Minister's Award from the Korea Ministry of Science and ICT (World Smart City Expo 2025)
 
 ## Deployment Options
-- **SaaS**: Cloud-based, immediate access
-- **On-Premise**: Enterprise security-grade local deployment
-- **API**: Pre-processing pipeline integration and extension
+- **SaaS**: Use on the web, no install
+- **On-Premise**: Install on your own server
+
+## Guide
+- User guide (KO/EN/JA): https://studio.pmautotwin.com/manual
 
 ## Languages
 The platform and website support Korean (ko), English (en), and Japanese (ja).

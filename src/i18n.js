@@ -321,7 +321,7 @@ const translations = {
     'precision.cta': 'Verify directly with my file',
     // ZERO
     'zero.eyebrow': 'FLEXIBLE DEPLOYMENT',
-    'zero.title': 'Deploy it <em>your way</em>,<br />perfectly suited to your environment.',
+    'zero.title': 'Deploy it <em>your way</em>,<br />to fit your environment.',
     'zero.desc': 'Fast & light SaaS for instant access, air-gapped on-premise for enterprise security,<br />or preprocessing API to plug into your pipeline. We support every infrastructure.',
     'zero.deploy.saas': 'Use on the web, no install',
     'zero.deploy.onprem': 'Install on your own server',
