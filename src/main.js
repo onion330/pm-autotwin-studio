@@ -385,7 +385,7 @@ function startLoop(ctx) {
         const op = 0.5 * fadeIn;
         ctx.heavyWireframe.children.forEach(c => {
           if (c.material) {
-            c.material.opacity = c.isLineSegments ? op : op * 0.25;
+            c.material.opacity = c.isLineSegments ? op : op * 0.08;
             c.material.clippingPlanes = [];
           }
         });
@@ -394,7 +394,7 @@ function startLoop(ctx) {
         const op = 0.85 * (1 - scanP * 0.2);
         ctx.heavyWireframe.children.forEach(c => {
           if (c.material) {
-            c.material.opacity = c.isLineSegments ? op : op * 0.4;
+            c.material.opacity = c.isLineSegments ? op : op * 0.12; // 촘촘한 원본은 면 선을 옅게(덩어리처럼 안 보이게)
             c.material.clippingPlanes = [ctx.heavyClip]; // 위(아직 안 지나간 곳)만
           }
         });
