@@ -4434,3 +4434,10 @@ ol {
     .hero__proofline { flex-wrap: wrap; border-radius: 16px; font-size: 0.8rem; }
     .hero__proofline-text { white-space: normal; }
 }
+
+
+/* PM OmniMetric 카드(2026-11-07): 카드 전체가 링크 */
+a.studio__feature-card--om { color: inherit; text-decoration: none; cursor: pointer; }
+a.studio__feature-card--om:hover { border-color: rgba(0, 243, 255, 0.45); }
+.studio__om-link { display: inline-block; margin-top: 1.2rem; color: var(--cyan); font-weight: 700; }
+a.studio__feature-card--om:hover .studio__om-link { text-decoration: underline; }

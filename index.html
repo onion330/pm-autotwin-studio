@@ -167,13 +167,13 @@
     <div class="hero__scanline" id="heroScanline">
       <div class="hero__scanline-beam"></div>
 
-      <!-- 스캔라인 위 = 아직 안 지나간 무거운 원본 (숫자는 화면 속 데모 엔진 파일에서 직접 잰 값) -->
+      <!-- 스캔라인 위 = 지나간 자리, 가벼운 결과 (숫자는 화면 속 데모 엔진 파일에서 직접 잰 값, 대표님 11/7 공개 허락) -->
       <div class="hero__scan-info hero__scan-info--top" id="scanInfoTop">
-        <div class="hero__scan-info-tag hero__scan-info-tag--red">ORIGINAL · HEAVY CAD</div>
+        <div class="hero__scan-info-tag hero__scan-info-tag--cyan">OPTIMIZED · LIGHT</div>
         <div class="hero__scan-stats">
-          <span class="hero__scan-stat"><strong>137,269</strong> vertices</span>
-          <span class="hero__scan-stat"><strong>76,820</strong> polygons</span>
-          <span class="hero__scan-stat"><strong>5.3 MB</strong></span>
+          <span class="hero__scan-stat"><strong>42,034</strong> vertices</span>
+          <span class="hero__scan-stat"><strong>21,617</strong> polygons</span>
+          <span class="hero__scan-stat"><strong>1.7 MB</strong></span>
         </div>
       </div>
 
@@ -191,15 +191,15 @@
         <span>One Button</span>
       </div>
 
-      <!-- 스캔라인 아래 = 지나간 자리, 가벼운 결과 -->
+      <!-- 스캔라인 아래 = 아직 안 지나간 무거운 원본 -->
       <div class="hero__scan-info hero__scan-info--bottom" id="scanInfoBottom">
-        <div class="hero__scan-info-tag hero__scan-info-tag--cyan">OPTIMIZED · LIGHT</div>
+        <div class="hero__scan-info-tag hero__scan-info-tag--red">ORIGINAL · HEAVY CAD</div>
         <div class="hero__scan-stats">
-          <span class="hero__scan-stat"><strong>42,034</strong> vertices</span>
-          <span class="hero__scan-stat"><strong>21,617</strong> polygons</span>
-          <span class="hero__scan-stat"><strong>1.7 MB</strong></span>
+          <span class="hero__scan-stat"><strong>137,269</strong> vertices</span>
+          <span class="hero__scan-stat"><strong>76,820</strong> polygons</span>
+          <span class="hero__scan-stat"><strong>5.3 MB</strong></span>
         </div>
-        <div class="hero__scan-note">Demo model shown above · one file</div>
+        <div class="hero__scan-note">Demo model · one file</div>
       </div>
     </div>
 
@@ -266,7 +266,7 @@
         <div class="video-showcase__player" id="videoPlayer">
           <!-- Thumbnail overlay (before play) -->
           <div class="video-showcase__thumb" id="videoThumb">
-            <img src="https://img.youtube.com/vi/pC7eHKDvC78/maxresdefault.jpg" alt="PM AutoTwin Demo"
+            <img src="https://img.youtube.com/vi/GrHvPjKkGwo/maxresdefault.jpg" alt="PM AutoTwin Demo"
               class="video-showcase__thumb-img" id="videoThumbImg" />
             <div class="video-showcase__play-ring">
               <svg viewBox="0 0 80 80" class="video-showcase__play-svg">
@@ -296,16 +296,15 @@
       <!-- 3-Step Pipeline Animation -->
       <div class="studio__pipeline" data-reveal>
         <div class="studio__pipe-step" data-step="1">
-          <div class="studio__pipe-icon studio__pipe-icon--gen">
+          <div class="studio__pipe-icon studio__pipe-icon--opt">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
             </svg>
           </div>
           <span class="studio__pipe-num">01</span>
-          <h4 class="studio__pipe-title" data-i18n="studio.pipe.1.title">AI 3D 생성</h4>
-          <p class="studio__pipe-desc" data-i18n="studio.pipe.1.desc">텍스트/이미지 → 3D 모델</p>
+          <h4 class="studio__pipe-title" data-i18n="studio.pipe.1.title">최적화</h4>
+          <p class="studio__pipe-desc" data-i18n="studio.pipe.1.desc">무거운 CAD·BIM을 가볍게</p>
         </div>
         <div class="studio__pipe-arrow">
           <svg width="40" height="16" viewBox="0 0 40 16">
@@ -314,15 +313,15 @@
           </svg>
         </div>
         <div class="studio__pipe-step" data-step="2">
-          <div class="studio__pipe-icon studio__pipe-icon--opt">
+          <div class="studio__pipe-icon studio__pipe-icon--gen">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
+              <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" />
+              <path d="M8.5 12l2.5 2.5 4.5-5" />
             </svg>
           </div>
           <span class="studio__pipe-num">02</span>
-          <h4 class="studio__pipe-title" data-i18n="studio.pipe.2.title">Vertex-GNN 최적화</h4>
-          <p class="studio__pipe-desc" data-i18n="studio.pipe.2.desc">원클릭 자동 경량화</p>
+          <h4 class="studio__pipe-title" data-i18n="studio.pipe.2.title">원형 보존 검증</h4>
+          <p class="studio__pipe-desc" data-i18n="studio.pipe.2.desc">PM OmniMetric 리포트 (오픈 예정)</p>
         </div>
         <div class="studio__pipe-arrow">
           <svg width="40" height="16" viewBox="0 0 40 16">
@@ -349,31 +348,6 @@
       <div class="studio__features" data-reveal>
 
         <!-- AI 3D Generation -->
-        <div class="studio__feature-card studio__feature-card--gen">
-          <div class="studio__feature-visual">
-            <div class="studio__prompt-demo">
-              <div class="studio__prompt-input">
-                <span class="studio__prompt-cursor">|</span>
-                <span class="studio__prompt-text" id="studioPromptText"></span>
-              </div>
-              <div class="studio__prompt-arrow">→</div>
-              <div class="studio__prompt-result">
-                <div class="studio__cube-spin"></div>
-              </div>
-            </div>
-          </div>
-          <div class="studio__feature-content">
-            <span class="studio__feature-tag studio__feature-tag--cyan" data-i18n="studio.feature.gen.tag">AI 3D
-              GENERATION</span>
-            <h3 class="studio__feature-title" data-i18n="studio.feature.gen.title" data-i18n-html>필요한 3D 에셋,<br />AI로 생성하세요.</h3>
-            <p class="studio__feature-desc" data-i18n="studio.feature.gen.desc">
-              디지털트윈에는 고정밀 CAD 모델뿐 아니라 소화기, 표지판 같은 가벼운 에셋도 필요합니다.
-              그때마다 새로 디자인하면 비용이 치솟죠. 오토트윈 스튜디오의 생성 AI로
-              필요한 3D를 즉시 만들고, 그 자리에서 바로 최적화하세요.
-            </p>
-          </div>
-        </div>
-
         <!-- 3D Optimization (Before/After Slider) -->
         <div class="studio__feature-card studio__feature-card--opt">
           <div class="studio__feature-visual studio__feature-visual--slider">
@@ -417,6 +391,29 @@
             </p>
           </div>
         </div>
+
+        <!-- PM OmniMetric — 원형 보존 검증 (오픈 예정). 카드 전체를 누르면 소개 페이지로 -->
+        <a class="studio__feature-card studio__feature-card--om" href="https://www.pocketmemory.co.kr/omnimetric"
+          target="_blank" rel="noopener noreferrer">
+          <div class="studio__feature-visual studio__feature-visual--ply">
+            <img src="/omnimetric/score.jpg" alt="PM OmniMetric — 99.94 Pass" class="studio__feature-img" loading="lazy" />
+            <div class="ply-overlay">
+              <div class="ply-overlay__badge">
+                <span class="ply-overlay__icon">✓</span>
+                <span data-i18n="studio.om.badge">오픈 예정</span>
+              </div>
+            </div>
+          </div>
+          <div class="studio__feature-content">
+            <span class="studio__feature-tag studio__feature-tag--green" data-i18n="studio.feature.om.tag">PM OMNIMETRIC · 원형 보존 리포트</span>
+            <h3 class="studio__feature-title" data-i18n="studio.feature.om.title" data-i18n-html>가볍게 만들었다면,<br />원본과 같은지 리포트로 확인하세요.</h3>
+            <p class="studio__feature-desc" data-i18n="studio.feature.om.desc">경량화하거나 변환한 3D가 원본과 얼마나 같은지 숫자로 보여 주는 리포트입니다. 형상 점수와 판정, 부품 이름·계층이 남았는지, 가장 크게 달라진 곳까지 한 번에 담습니다.</p>
+            <ul class="studio__feature-list">
+              <li data-i18n="studio.feature.om.case">공개 로봇 팔 SO-ARM100 STEP을 PM AutoTwin Studio로 60% 줄인 결과: 형상 점수 99.94(합격), 원본과 가장 큰 차이 0.09mm (사내 시험)</li>
+            </ul>
+            <span class="studio__om-link" data-i18n="studio.feature.om.link">PM OmniMetric 자세히 보기 →</span>
+          </div>
+        </a>
 
         <!-- OpenUSD Pipeline -->
         <div class="studio__feature-card studio__feature-card--usd">
