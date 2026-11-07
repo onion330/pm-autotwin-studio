@@ -63,14 +63,9 @@
           "priceCurrency": "KRW",
           "description": "Free tier available, paid plans for enterprise"
         },
-        "author": {
-          "@type": "Organization",
-          "name": "POCKET MEMORY Inc.",
-          "url": "https://studio.pmautotwin.com",
-          "sameAs": [
-            "https://studio.pmautotwin.com"
-          ]
-        },
+        "@id": "https://studio.pmautotwin.com/#app",
+        "author": { "@id": "https://www.pocketmemory.co.kr/#organization" },
+        "publisher": { "@id": "https://www.pocketmemory.co.kr/#organization" },
         "featureList": [
           "Heavy CAD and large IFC optimization",
           "OpenUSD (Beta) conversion",
@@ -85,9 +80,18 @@
       },
       {
         "@type": "Organization",
+        "@id": "https://www.pocketmemory.co.kr/#organization",
         "name": "POCKET MEMORY Inc.",
-        "alternateName": "주식회사 포켓메모리",
-        "url": "https://studio.pmautotwin.com",
+        "alternateName": ["주식회사 포켓메모리", "포켓메모리", "Pocket Memory Co., Ltd.", "PocketMemory"],
+        "url": "https://www.pocketmemory.co.kr",
+        "sameAs": [
+          "https://www.linkedin.com/company/pocketmemory",
+          "https://www.youtube.com/@pocketmemory",
+          "https://medium.com/@pocketmemory1",
+          "https://blog.naver.com/pocketmemory",
+          "https://www.facebook.com/pocket3d",
+          "https://github.com/onion330/pm-autotwin-studio"
+        ],
         "logo": "https://studio.pmautotwin.com/pmas.png",
         "description": "South Korean deep-tech company specializing in 3D digital twin optimization. IEEE P3079.5/6 PAR submission in preparation.",
         "foundingCountry": "KR",
@@ -101,11 +105,7 @@
         "name": "PM AutoTwin Studio",
         "url": "https://studio.pmautotwin.com",
         "inLanguage": ["ko", "en", "ja"],
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://studio.pmautotwin.com/#{search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "publisher": { "@id": "https://www.pocketmemory.co.kr/#organization" }
       }
     ]
   }
