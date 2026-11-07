@@ -12,24 +12,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studio.pmautotwin.com/" />
   </url>
   <url>
-    <loc>https://studio.pmautotwin.com/manual/ko</loc>
-    <lastmod>2026-11-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://studio.pmautotwin.com/manual/en</loc>
-    <lastmod>2026-11-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://studio.pmautotwin.com/manual/ja</loc>
-    <lastmod>2026-11-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://studio.pmautotwin.com/privacy</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>yearly</changefreq>
