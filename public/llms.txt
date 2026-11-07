@@ -4,16 +4,13 @@
 
 ## Company
 - **Name**: POCKET MEMORY Inc. (주식회사 포켓메모리)
-- **Website**: https://studio.pmautotwin.com
+- **Website**: https://www.pocketmemory.co.kr
+- **Product site**: https://studio.pmautotwin.com
 - **Industry**: 3D Digital Twin, Asset Management, Industrial AI
 - **Location**: Seoul, South Korea
 
 ## Product: PM AutoTwin Studio
-PM AutoTwin Studio connects three steps in one place:
-
-### PM Create (GEN)
-- Generates 3D models from an image input
-- Supports rapid prototyping and digital twin creation
+PM AutoTwin Studio connects these steps in one place:
 
 ### PM Optimize (OPT)
 - Opens large design files without splitting them and optimizes the meshes inside
@@ -24,6 +21,14 @@ PM AutoTwin Studio connects three steps in one place:
 ### PM Hub (HUB)
 - 3D asset management: search, reuse and share optimized files with your team
 - Secure links with an expiry period
+
+### PM OmniMetric (coming soon)
+- A report that shows, in numbers, how close an optimized or converted 3D is to the original: a shape score and verdict, whether part names and hierarchy survived, and where the shape changed most
+- Results from any tool are measured the same way
+- https://www.pocketmemory.co.kr/omnimetric
+
+## Published test records
+- https://studio.pmautotwin.com/#evidence
 
 ## Standards
 - IEEE P3079.5/6 (3D quality measurement and optimization): PAR submission in preparation
