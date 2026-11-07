@@ -14,6 +14,7 @@
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { initI18n, getLang } from './i18n.js';
 import './proof.js';
 
@@ -119,6 +120,10 @@ async function initScene() {
   renderer.localClippingEnabled = true; // CRITICAL for clip planes
 
   const loader = new GLTFLoader();
+  // 원본 모델은 Draco 압축(용량 절반) — 해독기는 /draco/ 에 둠
+  const draco = new DRACOLoader();
+  draco.setDecoderPath('/draco/');
+  loader.setDRACOLoader(draco);
 
   // ── Clipping planes (updated every frame) ──
   // heavyClip: keeps y ≥ scanY (ABOVE scanline — 아직 안 지나간 무거운 원본)
@@ -133,7 +138,7 @@ async function initScene() {
   // ── Load engine.glb (HEAVY original — red, dense) ──
   let engineProc = null, enginePos = null, heavyWireframe = null;
   try {
-    const gltf = await new Promise((r, e) => loader.load('/engine.glb', r, null, e));
+    const gltf = await new Promise((r, e) => loader.load('/models/so-arm100_original.glb', r, null, e));
     engineProc = processGLB(gltf);
     enginePos = sampleParticles(engineProc, PARTICLE_COUNT);
     // Dense wireframe: low edge angle = MORE lines = heavier look
@@ -146,7 +151,7 @@ async function initScene() {
   // ── Load optimize_engine.glb (OPTIMIZED — cyan, clean) ──
   let optProc = null, optPos = null, optWireframe = null;
   try {
-    const gltf = await new Promise((r, e) => loader.load('/optimize_engine.glb', r, null, e));
+    const gltf = await new Promise((r, e) => loader.load('/models/so-arm100_studio60.glb', r, null, e));
     optProc = processGLB(gltf);
     optPos = sampleParticles(optProc, PARTICLE_COUNT);
     // Clean wireframe: high edge angle = FEWER lines = cleaner look
