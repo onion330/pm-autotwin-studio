@@ -167,22 +167,22 @@
     <div class="hero__scanline" id="heroScanline">
       <div class="hero__scanline-beam"></div>
 
-      <!-- Optimized info (ABOVE scanline — right side, close to model) -->
+      <!-- 스캔라인 위 = 아직 안 지나간 무거운 원본 (숫자는 화면 속 데모 엔진 파일에서 직접 잰 값) -->
       <div class="hero__scan-info hero__scan-info--top" id="scanInfoTop">
-        <div class="hero__scan-info-tag hero__scan-info-tag--cyan">OPTIMIZED</div>
+        <div class="hero__scan-info-tag hero__scan-info-tag--red">ORIGINAL · HEAVY CAD</div>
         <div class="hero__scan-stats">
-          <span class="hero__scan-stat"><strong>58,987</strong> vertices</span>
-          <span class="hero__scan-stat"><strong>7,328</strong> polygons</span>
-          <span class="hero__scan-stat"><strong>0.73 MB</strong></span>
+          <span class="hero__scan-stat"><strong>137,269</strong> vertices</span>
+          <span class="hero__scan-stat"><strong>76,820</strong> polygons</span>
+          <span class="hero__scan-stat"><strong>5.3 MB</strong></span>
         </div>
       </div>
 
-      <!-- Badge (left side, close to model) -->
+      <!-- 스캔라인을 따라 움직이는 이름표 + 연결선 -->
       <div class="hero__scan-badge" id="scanBadge">
-        <span class="hero__scan-badge-pct">89%</span>
+        <span class="hero__scan-badge-diamond" aria-hidden="true"><span></span></span>
         <div class="hero__scan-badge-detail">
-          <span class="hero__scan-badge-label">Optimized</span>
-          <span class="hero__scan-badge-timer"><span id="scanTimer">0</span>s</span>
+          <span class="hero__scan-badge-name">PM AutoTwin Studio</span>
+          <span class="hero__scan-badge-label">OPTIMIZING · STRUCTURE KEPT</span>
         </div>
       </div>
 
@@ -191,14 +191,15 @@
         <span>One Button</span>
       </div>
 
-      <!-- Original info (BELOW scanline — right side) -->
+      <!-- 스캔라인 아래 = 지나간 자리, 가벼운 결과 -->
       <div class="hero__scan-info hero__scan-info--bottom" id="scanInfoBottom">
-        <div class="hero__scan-info-tag hero__scan-info-tag--red">ORIGINAL</div>
+        <div class="hero__scan-info-tag hero__scan-info-tag--cyan">OPTIMIZED · LIGHT</div>
         <div class="hero__scan-stats">
-          <span class="hero__scan-stat"><strong>137,269</strong> vertices</span>
-          <span class="hero__scan-stat"><strong>67,992</strong> polygons</span>
-          <span class="hero__scan-stat"><strong>5.31 MB</strong></span>
+          <span class="hero__scan-stat"><strong>42,034</strong> vertices</span>
+          <span class="hero__scan-stat"><strong>21,617</strong> polygons</span>
+          <span class="hero__scan-stat"><strong>1.7 MB</strong></span>
         </div>
+        <div class="hero__scan-note">Demo model shown above · one file</div>
       </div>
     </div>
 
@@ -224,24 +225,13 @@
         <a href="#evidence" class="hero__cta hero__cta--ghost" data-i18n="hero.cta.ghost">샘플 결과 보기</a>
       </div>
 
-      <!-- 첫 화면 영수증: 공개 영상 + 원본 대조 -->
-      <div class="hero__receipt">
-        <a class="hero__receipt-video" id="heroVideo" href="https://youtu.be/Bm1Z9AahjfY" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.youtube.com/vi/Bm1Z9AahjfY/hqdefault.jpg" alt="" width="320" height="180" />
-          <span class="hero__receipt-play" aria-hidden="true"></span>
-          <span class="hero__receipt-vlabel" data-i18n="hero.proof.video">영상으로 보기</span>
-        </a>
-        <div class="hero__receipt-body">
-          <div class="hero__receipt-tag" data-i18n="hero.proof.tag">공개한 검증 기록</div>
-          <div class="hero__receipt-title" data-i18n="hero.proof.title">Revit 공조기(AHU) IFC → OpenUSD (Beta)</div>
-          <dl class="hero__receipt-rows">
-            <div><dt data-i18n="hero.proof.k1">정점</dt><dd data-i18n="hero.proof.v1">128만 → 84,427</dd></div>
-            <div><dt data-i18n="hero.proof.k2">용량</dt><dd>42.9 MB → 6.52 MB</dd></div>
-            <div><dt data-i18n="hero.proof.k3">남은 것</dt><dd data-i18n="hero.proof.v3">전압 208V, 체적 42.59027㎥ 등 속성값이 원본과 일치</dd></div>
-          </dl>
-          <div class="hero__receipt-cond" data-i18n="hero.proof.cond">1파일, IFC → OpenUSD 한 방향</div>
-        </div>
-      </div>
+      <!-- 첫 화면은 디자인 위주로: 큰 영상 카드 대신 한 줄 증거(자세한 기록·영상은 '검증 기록' 칸) -->
+      <a class="hero__proofline" href="#evidence">
+        <span class="hero__proofline-dot" aria-hidden="true"></span>
+        <span class="hero__proofline-tag" data-i18n="hero.proof.tag">공개한 검증 기록</span>
+        <span class="hero__proofline-text" data-i18n="hero.proof.line">Revit 공조기 IFC → OpenUSD (Beta) · 정점 128만 → 84,427 · 속성값 원본과 일치</span>
+        <span class="hero__proofline-arrow" aria-hidden="true">→</span>
+      </a>
 
       <div class="hero__scroll-hint">
         <div class="hero__scroll-mouse">

@@ -2,8 +2,9 @@
    PM AutoTwin Studio — V8 Clipping Plane Scanline
    
    TWO wireframes + ClipPlane = physically split at scanline Y
-   BELOW scanline: engine.glb RED/ORANGE dense wireframe  
-   ABOVE scanline: optimize_engine.glb CYAN clean wireframe
+   스캔라인은 아래에서 위로 올라간다(대표님 2026-11-07).
+   ABOVE scanline: engine.glb 무거운 원본 — 붉은/주황, 촘촘
+   BELOW scanline: optimize_engine.glb 지나간 자리 = 가벼운 결과 — 청록, 깔끔
    
    Phases:
    1. Chaos (0→0.32): scattered particles → assemble into engine shape
@@ -120,10 +121,10 @@ async function initScene() {
   const loader = new GLTFLoader();
 
   // ── Clipping planes (updated every frame) ──
-  // heavyClip: keeps y ≤ scanY (BELOW scanline)
-  const heavyClip = new THREE.Plane(new THREE.Vector3(0, -1, 0), 999);
-  // optClip: keeps y ≥ scanY (ABOVE scanline)  
-  const optClip = new THREE.Plane(new THREE.Vector3(0, 1, 0), 999);
+  // heavyClip: keeps y ≥ scanY (ABOVE scanline — 아직 안 지나간 무거운 원본)
+  const heavyClip = new THREE.Plane(new THREE.Vector3(0, 1, 0), -999);
+  // optClip: keeps y ≤ scanY (BELOW scanline — 지나간 자리, 가벼운 결과)
+  const optClip = new THREE.Plane(new THREE.Vector3(0, -1, 0), -999);
 
   // ── Master group (unified rotation) ──
   const masterGroup = new THREE.Group();
@@ -303,12 +304,12 @@ function startLoop(ctx) {
     const phase = scrollProg < 0.55 ? 'chaos' : (scrollProg < 0.85 ? 'scan' : 'done');
     const scanP = phase === 'scan' ? smoothStep((scrollProg - 0.55) / 0.30) : (phase === 'done' ? 1 : 0);
     const assemblyBlend = phase === 'chaos' ? smoothStep(scrollProg / 0.55) : 1.0;
-    // Scanline Y: top → bottom of model
-    const scanY = ctx.maxY - scanP * (ctx.maxY - ctx.minY);
+    // Scanline Y: bottom → top of model (지나간 아래쪽부터 가벼워진다)
+    const scanY = ctx.minY + scanP * (ctx.maxY - ctx.minY);
 
     // ── UPDATE CLIPPING PLANES ──
-    ctx.heavyClip.constant = scanY;
-    ctx.optClip.constant = -scanY;
+    ctx.heavyClip.constant = -scanY;   // y - scanY ≥ 0 → 위만
+    ctx.optClip.constant = scanY;      // scanY - y ≥ 0 → 아래만
 
     // ── UI ──
     if (heroRing) heroRing.classList.toggle('active', phase === 'chaos' && scrollProg > 0.12);
@@ -389,7 +390,7 @@ function startLoop(ctx) {
         ctx.heavyWireframe.children.forEach(c => {
           if (c.material) {
             c.material.opacity = c.isLineSegments ? op : op * 0.4;
-            c.material.clippingPlanes = [ctx.heavyClip]; // Keep BELOW scanline only
+            c.material.clippingPlanes = [ctx.heavyClip]; // 위(아직 안 지나간 곳)만
           }
         });
       } else if (phase === 'done') {
@@ -406,7 +407,7 @@ function startLoop(ctx) {
         ctx.optWireframe.children.forEach(c => {
           if (c.material) {
             c.material.opacity = c.isLineSegments ? op : op * 0.35;
-            c.material.clippingPlanes = [ctx.optClip]; // ALWAYS restore clip: ABOVE scanline only
+            c.material.clippingPlanes = [ctx.optClip]; // 아래(지나간 곳)만
           }
         });
       } else if (phase === 'done') {
@@ -482,13 +483,12 @@ function startLoop(ctx) {
         // ═══ SCAN / DONE ═══
         // SHARP boundary — very narrow transition zone (1.5% of model height)
         const zone = (ctx.maxY - ctx.minY) * 0.015;
-        const isAbove = engY > (scanY + zone);
-        const isBelow = engY < (scanY - zone);
-        // Blend only in the very thin transition strip
-        const blend = Math.max(0, Math.min(1, (engY - scanY + zone) / (zone * 2)));
+        const isPassed = engY < (scanY + zone);
+        // Blend only in the very thin transition strip (아래로 갈수록 1)
+        const blend = Math.max(0, Math.min(1, (scanY + zone - engY) / (zone * 2)));
 
-        if (phase === 'done' || isAbove) {
-          // ABOVE SCANLINE → morph to optimize positions, CYAN, sparse
+        if (phase === 'done' || isPassed) {
+          // BELOW SCANLINE (지나간 곳) → morph to optimize positions, CYAN, sparse
           const t = phase === 'done' ? 1.0 : blend;
           px = engX + (optX - engX) * t;
           py = engY + (optY - engY) * t;
@@ -508,7 +508,7 @@ function startLoop(ctx) {
             : ctx.baseSize * Math.max(0, 1 - blend * 3);
 
         } else {
-          // BELOW SCANLINE → stay at engine positions, RED, dense, noisy
+          // ABOVE SCANLINE (아직 안 지나간 곳) → stay at engine positions, RED, dense, noisy
           // Stronger noise for more chaotic/dense feel
           const noise = 0.06;
           px = engX + Math.sin(time * 0.8 + ctx.seeds[i3] * 5) * noise;
