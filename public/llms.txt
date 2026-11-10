@@ -27,6 +27,11 @@ PM AutoTwin Studio connects these steps in one place:
 - Results from any tool are measured the same way
 - https://www.pocketmemory.co.kr/omnimetric
 
+### PM RoboOn (robot CAD to simulation model, CAD to URDF)
+- Turns a supplier's robot CAD (STEP) into a simulation model with moving joints: per-link URDF (USD in Beta), part names kept, collision shapes, reference mass, and a comparison report. First file free.
+- In an in-house test, one public model was imported into Isaac Sim 4.5 and all 6 joints (5 arm + 1 gripper) moved to their target angles.
+- https://www.pocketmemory.co.kr/robot
+
 ## Published test records
 - https://studio.pmautotwin.com/#evidence
 
