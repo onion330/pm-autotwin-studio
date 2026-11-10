@@ -222,6 +222,38 @@ ol {
     color: var(--cyan);
 }
 
+/* 다른 제품 페이지 링크 — 앞에 옅은 세로줄로 이 사이트 메뉴와 구분 */
+.nav__links li a.nav__product {
+    color: var(--text-primary, #e8edf3);
+    font-weight: 600;
+}
+
+
+.nav__links li a.nav__product[href$="omnimetric"] {
+    position: relative;
+}
+
+.nav__links li a.nav__product[href$="omnimetric"]::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    width: 1px;
+    height: 14px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.nav__product-on {
+    color: #e64a49;
+}
+
+@media (max-width: 1180px) {
+    .nav__links {
+        gap: 18px;
+    }
+}
+
 .nav__cta-btn {
     background: var(--grad-cyan) !important;
     color: #000 !important;
