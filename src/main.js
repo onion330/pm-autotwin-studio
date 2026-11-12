@@ -1008,6 +1008,9 @@ ${payload.message || ''}`;
     }
 
     btn.disabled = true;
+    // 누르자마자 보내는 중 표시(CRM이 알림 메일까지 보내고 답해서 몇 초 걸림)
+    const btnLabel = btn.textContent;
+    btn.textContent = { ko: '보내는 중…', en: 'Sending…', ja: '送信中…' }[getLang()] || '보내는 중…';
     if (status) { status.className = 'cta__form-status'; status.textContent = ''; }
 
     try {
@@ -1036,6 +1039,7 @@ ${payload.message || ''}`;
       }
     } finally {
       btn.disabled = false;
+      btn.textContent = btnLabel;
     }
   });
 }
