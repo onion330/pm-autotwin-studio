@@ -1000,6 +1000,12 @@ function initCtaForm() {
     for (const [key, value] of formData.entries()) {
       if (value) payload[key] = value;
     }
+    // 고른 '필요한 일'은 CRM이 받는 문의 내용 맨 앞에 붙여 보냄
+    if (payload.need) {
+      payload.message = `[${payload.need}]
+${payload.message || ''}`;
+      delete payload.need;
+    }
 
     btn.disabled = true;
     if (status) { status.className = 'cta__form-status'; status.textContent = ''; }
@@ -1026,7 +1032,7 @@ function initCtaForm() {
       if (status) {
         status.className = 'cta__form-status error';
         const lang = getLang();
-        status.textContent = { ko: '❌ 전송에 실패했습니다. 잠시 후 다시 시도해주세요.', en: '❌ Submission failed. Please try again later.', ja: '❌ 送信に失敗しました。しばらくしてから再度お試しください。' }[lang] || '❌ 전송 실패';
+        status.textContent = { ko: '❌ 전송에 실패했습니다. 잠시 후 다시 시도하시거나 contact@pmautotwin.com 으로 메일 주세요.', en: '❌ Submission failed. Please try again later or email contact@pmautotwin.com.', ja: '❌ 送信に失敗しました。しばらくしてから再度お試しいただくか、contact@pmautotwin.com までメールでご連絡ください。' }[lang] || '❌ 전송 실패';
       }
     } finally {
       btn.disabled = false;
