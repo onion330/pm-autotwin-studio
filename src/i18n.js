@@ -10,7 +10,7 @@ const translations = {
     'nav.usability': '사용성',
     'nav.trust': '신뢰',
     'nav.evidence': '검증 기록',
-    'nav.company': '포켓메모리',
+    'nav.company': '포켓메모리 홈',
     'nav.demo': '무료 사용하기',
     // HERO
     'hero.badge': '피지컬 AI·디지털트윈 시뮬레이션을 위한 3D 데이터 준비',
@@ -233,7 +233,7 @@ const translations = {
     'nav.usability': 'Usability',
     'nav.trust': 'Trust',
     'nav.evidence': 'Verification',
-    'nav.company': 'Pocket Memory',
+    'nav.company': 'Pocket Memory Home',
     'nav.demo': 'Try Free',
     // HERO
     'hero.badge': '3D data prep for physical AI and digital twin simulation',
@@ -456,7 +456,7 @@ const translations = {
     'nav.usability': '使いやすさ',
     'nav.trust': '信頼',
     'nav.evidence': '検証記録',
-    'nav.company': 'ポケットメモリー',
+    'nav.company': 'ポケットメモリー ホーム',
     'nav.demo': '無料で使う',
     // HERO
     'hero.badge': 'フィジカルAI・デジタルツインのシミュレーションに向けた3Dデータ準備',

@@ -2389,6 +2389,48 @@ ol {
     color: var(--cyan);
 }
 
+/* 회사 홈으로 돌아가는 버튼 — 로고 왼쪽, 늘 보이게 */
+.nav__start {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.nav__home {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px 6px 9px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    color: #e8edf3;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.nav__home:hover,
+.nav__home:focus-visible {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background: rgba(0, 229, 255, 0.06);
+}
+
+@media (max-width: 480px) {
+    .nav__start { gap: 10px; }
+    .nav__home { padding: 6px 10px 6px 7px; font-size: 12px; }
+    .nav__logo > span { font-size: 14px; }
+}
+
+@media (max-width: 380px) {
+    /* 아주 좁은 화면: 글자 대신 화살표만(읽어 주는 이름은 남김) */
+    .nav__home { padding: 7px; }
+    .nav__home-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
 .nav__mobile-toggle {
     display: none;
     flex-direction: column;

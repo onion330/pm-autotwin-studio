@@ -128,12 +128,19 @@
   <!-- ═══ NAV ═══ -->
   <nav id="nav" class="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo">
-        <div class="nav__logo-diamond">
-          <div class="nav__logo-diamond-inner"></div>
-        </div>
-        <span>PM AutoTwin <span class="nav__logo-accent">Studio</span></span>
-      </a>
+      <div class="nav__start">
+        <!-- 회사 홈 '세 개의 문'으로 돌아가기 (대표님 11/15 "홈페이지로 바로 갈 수 있는 버튼이 잘 보여야") -->
+        <a href="https://www.pocketmemory.co.kr/#doors" class="nav__home">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          <span class="nav__home-text" data-i18n="nav.company">포켓메모리 홈</span>
+        </a>
+        <a href="#" class="nav__logo">
+          <div class="nav__logo-diamond">
+            <div class="nav__logo-diamond-inner"></div>
+          </div>
+          <span>PM AutoTwin <span class="nav__logo-accent">Studio</span></span>
+        </a>
+      </div>
       <ul class="nav__links" id="navLinks">
         <li><a href="#pain" data-i18n="nav.problem">Problem</a></li>
         <li><a href="#precision" data-i18n="nav.precision">정밀도</a></li>
@@ -143,8 +150,6 @@
         <!-- 다른 제품 페이지로 (대표님 11/10 "옴니 매트릭과 로보온 페이지 가는 메뉴") -->
         <li><a href="https://www.pocketmemory.co.kr/omnimetric" class="nav__product">PM OmniMetric</a></li>
         <li><a href="https://www.pocketmemory.co.kr/robot" class="nav__product">PM Robo<span class="nav__product-on">On</span></a></li>
-        <li><a href="https://www.pocketmemory.co.kr/" target="_blank" rel="noopener noreferrer"
-            data-i18n="nav.company">포켓메모리</a></li>
         <li><a href="https://studio-workspace.pmautotwin.com/" target="_blank" rel="noopener noreferrer"
             class="nav__cta-btn" data-i18n="nav.demo">무료 사용하기</a></li>
       </ul>
