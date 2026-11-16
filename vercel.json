@@ -1,4 +1,36 @@
 {
+  "redirects": [
+    {
+      "source": "/guide",
+      "destination": "/manual/en",
+      "permanent": true
+    },
+    {
+      "source": "/PM_AutoTwin_Studio_User_Guide",
+      "destination": "/manual/en",
+      "permanent": true
+    },
+    {
+      "source": "/PM_AutoTwin_Studio_User_Guide.html",
+      "destination": "/manual/en",
+      "permanent": true
+    },
+    {
+      "source": "/guide-kr",
+      "destination": "/manual/ko",
+      "permanent": true
+    },
+    {
+      "source": "/PM_AutoTwin_Studio_사용가이드.html",
+      "destination": "/manual/ko",
+      "permanent": true
+    },
+    {
+      "source": "/PM_AutoTwin_Studio_%EC%82%AC%EC%9A%A9%EA%B0%80%EC%9D%B4%EB%93%9C.html",
+      "destination": "/manual/ko",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/manual",
@@ -23,18 +55,6 @@
     {
       "source": "/terms",
       "destination": "/terms.html"
-    },
-    {
-      "source": "/PM_AutoTwin_Studio_User_Guide",
-      "destination": "/PM_AutoTwin_Studio_User_Guide.html"
-    },
-    {
-      "source": "/guide",
-      "destination": "/PM_AutoTwin_Studio_User_Guide.html"
-    },
-    {
-      "source": "/guide-kr",
-      "destination": "/PM_AutoTwin_Studio_사용가이드.html"
     },
     {
       "source": "/(.*)",
