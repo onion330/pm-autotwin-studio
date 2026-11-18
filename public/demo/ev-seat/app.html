@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전기차 탑승 편의성 디지털트윈 — 시범 화면 (예시 데이터)</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{ "imports": { "three": "./vendor/three/build/three.module.js" } }</script>
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <div class="brandline"><b>전기차 탑승 편의성 디지털트윈</b><span>부품 설계 소견까지 한 화면에</span></div>
+    <nav id="steps">
+      <button data-step="hero" class="on">한눈에</button>
+      <button data-step="s1"><i>1</i>시험 데이터</button>
+      <button data-step="s2"><i>2</i>3D 재현</button>
+      <button data-step="s3"><i>3</i>겹쳐 비교</button>
+      <button data-step="s4"><i>4</i>판정</button>
+      <button data-step="s5"><i>5</i>설계 소견서</button>
+    </nav>
+    <div class="sample">예시 데이터</div>
+  </header>
+
+  <section id="runbar"></section>
+
+  <main id="main">
+    <div id="stage">
+      <canvas id="c"></canvas>
+      <div id="labels"></div>
+      <div id="stageTools">
+        <button id="btnRider" class="tool">탑승자 시점</button>
+        <button id="btnColor" class="tool">부품 색 보기</button>
+        <button id="btnPath" class="tool on">진동 전달 경로</button>
+      </div>
+      <div id="legend"></div>
+      <div id="riderHud" hidden></div>
+    </div>
+    <aside id="side"></aside>
+  </main>
+
+  <section id="bottom">
+    <div id="transport">
+      <button id="play" aria-label="재생">▶</button>
+      <div id="scrub"><div id="scrubEv"></div><div id="scrubFill"></div><input id="tRange" type="range" min="0" max="30" step="0.01" value="12.7"></div>
+      <div id="tNow">12.7초</div>
+      <div id="speedSel"><button data-r="0.5">0.5×</button><button data-r="1" class="on">1×</button></div>
+    </div>
+    <div id="charts"></div>
+  </section>
+
+  <div id="report" hidden></div>
+  <div class="sample corner">예시 데이터 · 실제 시험 값 아님</div>
+</div>
+<script>addEventListener("error",e=>document.documentElement.dataset.err=(e.message||"")+" @"+(e.lineno||""));addEventListener("unhandledrejection",e=>document.documentElement.dataset.err="P:"+(e.reason&&e.reason.stack||e.reason));</script>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>

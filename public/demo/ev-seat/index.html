@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전기차 탑승 편의성 디지털트윈 — 포켓메모리 제안 시범</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="promo.css">
+<script type="importmap">{ "imports": { "three": "./vendor/three/build/three.module.js" } }</script>
+</head>
+<body>
+<header class="bar">
+  <div class="brand"><b>전기차 탑승 편의성 디지털트윈</b><span>포켓메모리 제안 시범</span></div>
+  <div class="bar-r"><span class="ex">예시 데이터</span><a class="ghost" href="app.html">전체 화면 시연 →</a></div>
+</header>
+
+<!-- 1. 첫 화면: 바로 눌러 보는 시연 -->
+<section id="hero">
+  <div class="hero-txt">
+    <p class="eyebrow">경북테크노파크 실차 시험 → 경북 부품기업의 설계까지</p>
+    <h1>시험 결과표를 넘어,<br><em>설계 소견서</em>까지.</h1>
+    <p class="lead">과속방지턱 한 번, 회생제동 한 번.<br>뒷좌석 시트의 <b>어느 부품이</b>, <b>언제</b>, <b>얼마나</b> 흔들렸고<br><b>어디를 먼저 살펴볼지</b> — 한 화면에서 바로.</p>
+    <div class="ctl">
+      <div class="ctl-row"><span class="ctl-k">구간</span>
+        <button data-sc="bump" class="on">과속방지턱</button><button data-sc="regen">회생제동</button><button data-sc="all">30초 전체</button></div>
+      <div class="ctl-row"><span class="ctl-k">속도</span>
+        <button data-sp="30">30 km/h</button><button data-sp="40" class="on">40 km/h</button><button data-sp="60">60 km/h</button></div>
+      <div class="ctl-row"><span class="ctl-k">허리 받침</span>
+        <button data-v="base">양산</button><button data-v="v1" class="on">v1 시작품</button><button data-v="v2">v2 개선품</button></div>
+      <div class="ctl-row"><span class="ctl-k">보기</span>
+        <button data-view="out" class="on">바깥에서</button><button data-view="rider">탑승자 시점</button></div>
+    </div>
+    <p class="hint">👆 버튼을 누르거나, 3D 시트의 부품을 직접 눌러 보세요</p>
+  </div>
+  <div class="hero-3d" id="stage">
+    <canvas id="c"></canvas>
+    <div id="labels"></div>
+    <div id="hud" hidden></div>
+    <div class="verdict" id="verdict"></div>
+    <div class="partcard" id="partcard" hidden></div>
+    <div class="tl"><canvas id="spark"></canvas></div>
+  </div>
+</section>
+
+<!-- 2. 왜 경북인가 -->
+<section class="sec" id="why">
+  <p class="kicker">왜 경북, 왜 지금</p>
+  <h2>전기차는 조용해서, <em>진동</em>이 더 잘 느껴집니다.</h2>
+  <div class="cards3">
+    <div class="c"><i>01</i><h3>엔진 소리가 사라지자<br>진동이 남았습니다</h3><p>강한 가속과 회생제동, 노면 충격. 탑승자는 소리 대신 <b>몸으로</b> 차를 느낍니다.</p></div>
+    <div class="c"><i>02</i><h3>경주의 몫은<br>“주행 진동·멀미 저감”</h3><p>광주·경북이 함께 키우는 미래차 탑승 편의 — 그중 경주가 맡은 주제가 <b>주행 진동과 멀미</b>입니다.</p></div>
+    <div class="c"><i>03</i><h3>그 진동을 받는 부품은<br>경북에서 만듭니다</h3><p>경주 외동·안강의 <b>시트 프레임 · 시트 레일 · 파워 럼버서포트 · 시트 스위치</b>. 일부 차종 뒷좌석에는 시트 안에 진동 모터까지 들어갑니다.</p></div>
+  </div>
+</section>
+
+<!-- 3. 부품기업이 얻는 것 -->
+<section class="sec alt" id="gain">
+  <p class="kicker">경북 부품기업이 얻는 3가지</p>
+  <h2>“그래서 우리 부품, 고쳐야 하나요?”에 <em>예 / 아니오</em>로.</h2>
+  <div class="gains">
+    <div class="g"><div class="gi">1</div><div><h3>우리 부품만 골라 봅니다</h3><p>시트를 방석·등판·허리 받침·레일로 나눠, <b>내 부품의 자리</b>에서 흔들림을 봅니다.</p></div></div>
+    <div class="g"><div class="gi">2</div><div><h3>바꿨더니 좋아졌나 — 한 화면에서</h3><p>같은 차·같은 구간에서 <b>v1과 v2를 나란히</b>. 판정은 “기준 안 ✓”처럼 한 줄로.</p></div></div>
+    <div class="g"><div class="gi">3</div><div><h3>완성차에 낼 설계 소견서 한 장</h3><p>시험 데이터로 <b>기업별 소견서 초안</b>을 만들고, 담당자가 확인·보완합니다.</p></div></div>
+  </div>
+  <div class="vs">
+    <div><b>흔한 방식</b><span>채널별 진동 그래프 + 엑셀 표<br>센서 이름(CH07)으로 자리를 찾아야</span></div>
+    <div class="arrow">→</div>
+    <div class="now"><b>이 플랫폼</b><span>3D 부품 위 색 + 판정 한 줄<br>“허리 받침, 회생제동 때 기준 밖”</span></div>
+  </div>
+</section>
+
+<!-- 4. 흐름 -->
+<section class="sec" id="flow">
+  <p class="kicker">실차 시험이 설계 소견서가 되기까지</p>
+  <h2>올리면, 보이고, 비교되고, <em>판정</em>까지.</h2>
+  <div class="steps" id="steps">
+    <button class="st on" data-i="1"><i>1</i>시험 데이터 올리기</button>
+    <button class="st" data-i="2"><i>2</i>3D 위에 재현</button>
+    <button class="st" data-i="3"><i>3</i>조건별 겹쳐 비교</button>
+    <button class="st" data-i="4"><i>4</i>전·후 판정</button>
+    <button class="st" data-i="5"><i>5</i>설계 소견서</button>
+  </div>
+  <div class="shot"><img id="shot" src="img/step01.jpg" alt="시범 화면"><p id="shotCap"></p></div>
+</section>
+
+<!-- 5. 성과판 -->
+<section class="sec dark" id="kpi">
+  <p class="kicker">경북테크노파크 운영 성과판 <span class="ex sm">예시</span></p>
+  <h2>센터가 올해 <em>몇 곳을 도왔는지</em>, 바로 보입니다.</h2>
+  <div class="kpis">
+    <div><b data-n="32">0</b><span>지원한 부품기업</span></div>
+    <div><b data-n="214">0</b><span>발행한 설계 소견서</span></div>
+    <div><b data-n="1280">0</b><span>쌓인 실차 시험</span></div>
+    <div><b data-n="1" data-suf="일">0</b><span>시험 뒤 소견서까지</span></div>
+  </div>
+  <p class="note">숫자는 화면 예시입니다. 구축 범위 안에서 센터 데이터로 집계하는 방안을 협의합니다.</p>
+</section>
+
+<!-- 6. 왜 포켓메모리 -->
+<section class="sec" id="us">
+  <p class="kicker">왜 포켓메모리인가</p>
+  <h2>소견서가 나오려면 <em>네 가지</em>가 한 줄로 이어져야 합니다.</h2>
+  <div class="chain">
+    <div><i>①</i><h3>정확한 몸</h3><p>설계 원본의 부품 이름·구조를 살려 가볍게 바꾸는 — <b>자체 개발 PM AutoTwin</b></p></div>
+    <div><i>②</i><h3>현장을 아는 3D</h3><p><b>현대자동차그룹 싱가포르 혁신센터(HMGICS) 메타팩토리</b> 구축 사업 중 시뮬레이션·3D 환경 부분 참여(2021~2023)</p></div>
+    <div><i>③</i><h3>차를 아는 화면</h3><p><b>현대자동차 UX전략팀</b> XR 기반 선행 HMI 프로토타입(2025)</p></div>
+    <div><i>④</i><h3>판단을 내는 소견서</h3><p>대학병원 <b>임상 의사결정 지원(CDSS)</b> 개발(2024) — 데이터를 근거로 판단을 정리</p></div>
+  </div>
+  <p class="award">2025년 과학기술정보통신부 장관상(월드 스마트시티 엑스포)</p>
+</section>
+
+<footer>
+  <div><b>포켓메모리</b> · 경북테크노파크 「전기차 탑승 편의성 디지털트윈」 제안 시범 화면</div>
+  <div class="ft">이 페이지의 3D와 값은 모두 <b>예시 데이터</b>이며, 기준값도 예시입니다(실제 기준은 기업·센터가 정함). 본 사업에서 경북테크노파크 실차 시험 데이터로 구축을 제안합니다. 시험 데이터(같은 조건·부품 버전별 반복, 바닥 센서 포함)는 센터·기업이 준비합니다.</div>
+</footer>
+<div class="ex corner">예시 데이터</div>
+<script type="module" src="promo.mjs"></script>
+</body>
+</html>

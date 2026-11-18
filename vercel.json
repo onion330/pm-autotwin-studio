@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/demo/ev-seat",
+      "destination": "/demo/ev-seat/",
+      "permanent": false
+    },
+    {
       "source": "/guide",
       "destination": "/manual/en",
       "permanent": true
@@ -57,11 +62,24 @@
       "destination": "/terms.html"
     },
     {
+      "source": "/demo/ev-seat/",
+      "destination": "/demo/ev-seat/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
   "headers": [
+    {
+      "source": "/demo/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
     {
       "source": "/manual(.*)",
       "headers": [
