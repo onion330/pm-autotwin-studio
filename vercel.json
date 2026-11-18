@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/ev",
+      "destination": "/demo/ev-seat/",
+      "permanent": false
+    },
+    {
       "source": "/demo/ev-seat",
       "destination": "/demo/ev-seat/",
       "permanent": false
