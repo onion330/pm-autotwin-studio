@@ -15,8 +15,8 @@ const translations = {
     // HERO
     'hero.badge': '피지컬 AI·디지털트윈 시뮬레이션을 위한 3D 데이터 준비',
     'hero.title': '이미 가진 설계 데이터를, 시뮬레이션용으로.',
-    'hero.lead': '손으로 줄이던 무거운 CAD·대용량 IFC를 최적화하고 OpenUSD(Beta)로 바꿉니다.',
-    'hero.why': '요청하시면 이름·속성이 원본과 맞는지 리포트로 보여 드립니다.',
+    'hero.lead': 'CAD·BIM을 시뮬레이션에 쓸 수 있게 바꾸고, 원본과 같은지 리포트로 확인해 드립니다.',
+    'hero.why': '무거운 CAD·대용량 IFC를 최적화하고 OpenUSD(Beta)로 바꿉니다. 리포트는 요청 시 발행합니다.',
     'hero.video.id': 'Bm1Z9AahjfY',
     'hero.proof.video': '영상으로 보기',
     'hero.proof.tag': '공개한 검증 기록',
@@ -238,8 +238,8 @@ const translations = {
     // HERO
     'hero.badge': '3D data prep for physical AI and digital twin simulation',
     'hero.title': 'Your real CAD, prepped for simulation.',
-    'hero.lead': 'Optimize the heavy CAD and large IFC files you have been reducing by hand, and convert them to OpenUSD (Beta).',
-    'hero.why': 'On request, we check names and properties against the source and report what stayed.',
+    'hero.lead': 'We turn CAD and BIM into data you can use in simulation, and confirm with a report that it matches the original.',
+    'hero.why': 'Optimize heavy CAD and large IFC files and convert them to OpenUSD (Beta). Reports are issued on request.',
     'hero.video.id': '8GhZvnR1Xgw',
     'hero.proof.video': 'Watch the video',
     'hero.proof.tag': 'Published test record',
@@ -461,8 +461,8 @@ const translations = {
     // HERO
     'hero.badge': 'フィジカルAI・デジタルツインのシミュレーションに向けた3Dデータ準備',
     'hero.title': 'お持ちの設計データを、シミュレーションへ。',
-    'hero.lead': '手作業で軽量化していた重いCAD・大容量IFCを最適化し、OpenUSD（Beta）に変換します。',
-    'hero.why': 'ご依頼いただければ、名前・属性が原本と一致するかをレポートでお見せします。',
+    'hero.lead': 'CAD・BIMをシミュレーションで使える形に変換し、原本と一致するかをレポートで確認します。',
+    'hero.why': '重いCAD・大容量IFCを最適化し、OpenUSD（Beta）に変換します。レポートはご依頼に応じて発行します。',
     'hero.video.id': '8GhZvnR1Xgw',
     'hero.proof.video': '動画を見る',
     'hero.proof.tag': '公開した検証記録',
