@@ -330,7 +330,7 @@ function sideHTML() {
   const over = run.over.map(([a, b]) => `${a.toFixed(1)}~${b.toFixed(1)}초 ${evAt((a + b) / 2)?.name || ''}`).join(' · ');
   const attach = `<div class="attach"><div><b>원형 보존 리포트 함께 제공</b><br><span style="color:#4B5D72;font-size:13px">3D 시트 형상을 설계 원본과 대조한 근거 (시범 화면: 연결 전)</span></div></div>`;
   if (S.step === 'hero') return `
-   <div class="card verdict"><h3>설계 소견 · 자동 초안 <em>담당자 확인 전</em></h3>
+   <div class="card verdict"><h3>전·후 검증 리포트 · 초안 <em>담당자 확인 전</em></h3>
     <div class="headline"><div class="num">${pct(dUp)}</div><div class="desc">허리 받침 진동<small>양산 시트(${S.base}) 대비 · 같은 차·같은 구간</small></div></div>
     <ul class="rows">
      <li><span class="ic ok">✓</span><div>센서 자리 <b>24/24</b> 명세와 대조<small>3D 부품 위 좌표로 대조 (예시)</small></div></li>
@@ -377,13 +377,13 @@ function sideHTML() {
   return '';
 }
 
-// ───────── 설계 소견서 ─────────
+// ───────── 전·후 검증 리포트 ─────────
 function reportHTML(img) {
   const base = getRun(S.base), v1 = getRun(S.run), v2 = getRun(S.v2);
   const m = (r, k) => meanIn(r, k, 12, 14.2), dl = m(v2, 'lumbar') / m(v1, 'lumbar') - 1;
   const bar = (n, v, col) => `<div><span>${n}</span><i style="width:${Math.min(100, v / 1.3 * 100)}%;background:${col}"></i><b>${fmt(v)}</b></div>`;
   return `<div class="paper">
-   <div class="ph"><div><h1>설계 소견서 <span style="font-size:15px;color:#0068B0;font-weight:700">자동 초안</span><small>뒷좌석 시트 허리 받침 v2 · 같은 전기차 · 같은 구간(과속방지턱 + 회생제동) · 40 km/h</small></div>
+   <div class="ph"><div><h1>전·후 검증 리포트 <span style="font-size:15px;color:#0068B0;font-weight:700">초안</span><small>뒷좌석 시트 허리 받침 v2 · 같은 전기차 · 같은 구간(과속방지턱 + 회생제동) · 40 km/h</small></div>
     <div class="stamp">기준 안<small>담당자 확인 대기</small></div></div>
    <div class="sum"><div style="position:relative"><img src="${img}" alt="v1·v2 시트 진동 비교 3D"><span class="pill v1" style="position:absolute;left:12px;top:10px;font-size:14px">v1 · 기준 밖</span><span class="pill v2" style="position:absolute;right:12px;top:10px;font-size:14px">v2 · 기준 안</span></div>
     <div><h2 style="margin-top:0">한 줄 소견</h2><div class="q"><b>허리 받침을 v2로 바꾼 뒤, 회생제동 구간 진동이 ${pct(dl)} 줄었고 기준 안으로 들어왔습니다.</b> 다른 부품(바닥·레일·방석·등판)에는 영향이 없습니다.</div>

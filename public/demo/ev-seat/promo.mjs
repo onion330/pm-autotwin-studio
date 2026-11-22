@@ -130,7 +130,7 @@ function drawCard() {
   const v = vd, run = getRun(RUN[S.ver]), j = idx(S.t), n = shown.num;
   const numTxt = v.isPct ? (n >= 0 ? '+' : '−') + Math.abs(Math.round(n)) + '%' : fmt(n);
   $('#verdict').className = 'verdict' + (v.good ? ' good' : '');
-  $('#verdict').innerHTML = `<div class="k"><span>설계 소견 · 자동 초안</span><span>예시</span></div><div class="num">${numTxt}</div><div class="d">${v.desc}<small>${v.sub}</small></div>
+  $('#verdict').innerHTML = `<div class="k"><span>전·후 검증 리포트 · 초안</span><span>예시</span></div><div class="num">${numTxt}</div><div class="d">${v.desc}<small>${v.sub}</small></div>
    <span class="pill">${v.good ? '예시 기준 안 ✓' : `예시 기준 밖 ${v.ov}곳`}</span>
    <div class="live"><span>지금 <b>${fmt(val(run, 'lumbar', j))}</b> m/s²</span><span>${evAt(S.t) ? evAt(S.t).name + ' 중' : '일반 주행'}</span></div>`;
 }
@@ -193,7 +193,7 @@ document.querySelectorAll('[data-view]').forEach(b => b.onclick = () => { S.view
 addEventListener('resize', () => { resize(); setView(); });
 
 // 흐름 화면
-const CAPS = { 1: '① 제안 화면: 데이터로거 파일의 센서를 표준 이름·3D 자리로 정리하는 화면', 2: '② 제안 화면: 같은 시간축으로 3D 시트 색·그래프·주파수를 함께 보는 화면', 3: '③ 제안 화면: 같은 차·같은 구간 시험을 골라 겹쳐 버전별 차이를 보는 화면', 4: '④ 제안 화면: v1 → v2 부품별 변화와 예시 기준 안/밖을 한 줄로 보여 주는 화면', 5: '⑤ 제안 화면: 부품기업이 묻는 4가지에 답하는 설계 소견서 초안' };
+const CAPS = { 1: '① 제안 화면: 데이터로거 파일의 센서를 표준 이름·3D 자리로 정리하는 화면', 2: '② 제안 화면: 같은 시간축으로 3D 시트 색·그래프·주파수를 함께 보는 화면', 3: '③ 제안 화면: 같은 차·같은 구간 시험을 골라 겹쳐 버전별 차이를 보는 화면', 4: '④ 제안 화면: v1 → v2 부품별 변화와 예시 기준 안/밖을 한 줄로 보여 주는 화면', 5: '⑤ 제안 화면: 부품기업이 묻는 4가지에 답하는 전·후 검증 리포트 초안' };
 function step(i) { document.querySelectorAll('.st').forEach(b => b.classList.toggle('on', +b.dataset.i === i)); $('#shot').src = `img/step0${i}.jpg`; $('#shotCap').textContent = CAPS[i] + ' — 예시 데이터 화면'; }
 document.querySelectorAll('.st').forEach(b => b.onclick = () => { step(+b.dataset.i); clearInterval(auto); });
 step(1); const auto = CAP ? 0 : setInterval(() => { const n = +document.querySelector('.st.on').dataset.i % 5 + 1; step(n); }, 4200);
