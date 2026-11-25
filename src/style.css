@@ -4523,3 +4523,11 @@ a.studio__feature-card--om:hover .studio__om-link { text-decoration: underline; 
     background: #0b0f14;
     color: #e8eef2;
 }
+
+/* Product monogram (임시 사용판 v1, 2026-11-25) — file used as-is */
+.nav__logo-mark {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: block;
+}
